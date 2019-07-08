@@ -3,23 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Basic user registration with firebase.">
-  <meta name="keywords" content="HTML,CSS,XML,JavaScript, Firebase">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript,Firebase">
   <meta name="author" content="Octavio Torres">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <title>User Registration</title>
 </head>
 <body>
+
+  <h4>Registro de Usuarios</h4>
   <input id="email" type="email" placeholder="Ingresa email">
   <input id="password" type="password" placeholder="Ingresa Comtraseña">
   <button onclick="register()">Enviar</button>
 
+  <h4>Ingreso de Usuarios</h4>
+  <input id="email_login" type="email" placeholder="Ingresa email">
+  <input id="password_login" type="password" placeholder="Ingresa Comtraseña">
+  <button onclick="login()">Ingresar</button>
+
+  <div id="content"></div>
+
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
   <!-- TODO: Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#config-web-app -->
-  <script src="init-firebase.js"></script>
+  <script defer src="init-firebase.js"></script>
   <script defer src="app.js"></script>
 </body>
 </html>
