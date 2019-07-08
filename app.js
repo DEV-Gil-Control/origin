@@ -44,6 +44,7 @@ function observer(){
       console.log(`Usuario activo: ${email}, Estado: ${emailVerified}`)
     } else {
       console.log('Ningun Usuario Activo')
+      content.innerHTML = ""
       // User is signed out.
       // ...
     }
@@ -83,13 +84,28 @@ function show(user) {
 
   if (user.emailVerified) {
     content.innerHTML = `
-      <h4>Bienvenido ${user.email}... ya estas verificado.</h4>
-      <button onclick="singOut()">Cerrar</button>
+      <div class="container mt-5">
+        <div class="card">
+          <h5 class="card-header">Bienvenido ${user.email}</h5>
+          <div class="card-body">
+            <h5 class="card-title">Enhorabuena</h5>
+            <p class="card-text">Ya estas verificado...</p>
+            <button class="btn btn-outline-dark" onclick="singOut()">Cerrar</button>
+          </div>
+        </div>
+      </div>
     `;
   }else{
     content.innerHTML = `
-      <h4>Verifique su email(${user.email}) por favor.</h4>
-      <button onclick="singOut()">Cerrar</button>
+      <div class="container mt-5">
+        <div class="card">
+          <h5 class="card-header">Bienvenido ${user.email}</h5>
+          <div class="card-body">
+            <p class="card-text">Ingresa a tu email y verifica tu cuenta por favor.</p>
+            <button class="btn btn-outline-dark" onclick="singOut()">Cerrar</button>
+          </div>
+        </div>
+      </div>
     `;
   }
 }
