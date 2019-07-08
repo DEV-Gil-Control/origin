@@ -4,7 +4,9 @@ function register(){
 
     console.log( email , password);
 
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+    firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
+      verification()
+    }).catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -29,7 +31,7 @@ function login() {
 function observer(){
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      show();
+      show(user);
       // User is signed in.
       var displayName = user.displayName;
       var email = user.email;
@@ -39,7 +41,7 @@ function observer(){
       var uid = user.uid;
       var providerData = user.providerData;
       // ...
-      console.log(`Usuario activo: ${email}`)
+      console.log(`Usuario activo: ${email}, Estado: ${emailVerified}`)
     } else {
       console.log('Ningun Usuario Activo')
       // User is signed out.
@@ -49,7 +51,7 @@ function observer(){
 }
 observer();
 
-function SingOut(){
+function singOut(){
   firebase.auth().signOut().then(function() {
     // Sign-out successful.
     console.log(' Saliendo... ')
@@ -62,10 +64,32 @@ function SingOut(){
   });
 }
 
-function show() {
+function verification(){
+  var user = firebase.auth().currentUser;
+
+  user.sendEmailVerification().then(function() {
+    // Email sent.
+    console.log(`Enviando correo...`);
+  }).catch(function(error) {
+    // An error happened.
+    console.log(`Error (${error})`);
+
+  });
+}
+
+function show(user) {
+  var user = user;
   var content = document.getElementById('content');
-  content.innerHTML = `
-    <h4>Bienvenido</h4>
-    <button onclick="SingOut()">Cerrar</button>
-  `;
+
+  if (user.emailVerified) {
+    content.innerHTML = `
+      <h4>Bienvenido ${user.email}... ya estas verificado.</h4>
+      <button onclick="singOut()">Cerrar</button>
+    `;
+  }else{
+    content.innerHTML = `
+      <h4>Verifique su email(${user.email}) por favor.</h4>
+      <button onclick="singOut()">Cerrar</button>
+    `;
+  }
 }
