@@ -1,4 +1,4 @@
-function register() {
+function register(){
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
@@ -26,7 +26,7 @@ function login() {
   });email-password.html
 }
 
-function observer() {
+function observer(){
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       show();
@@ -49,7 +49,23 @@ function observer() {
 }
 observer();
 
+function SingOut(){
+  firebase.auth().signOut().then(function() {
+    // Sign-out successful.
+    console.log(' Saliendo... ')
+  }).catch(function(error) {
+    // An error happened.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+      // ...
+    console.log(' Codigo de error (${errorCode}), Mensaje de error (${errorMessage})')
+  });
+}
+
 function show() {
   var content = document.getElementById('content');
-  content.innerHTML = "Solo lo puede ver el usuario Activo";
+  content.innerHTML = `
+    <h4>Bienvenido</h4>
+    <button onclick="SingOut()">Cerrar</button>
+  `;
 }
