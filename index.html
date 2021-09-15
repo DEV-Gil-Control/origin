@@ -205,5 +205,15 @@ footer ul li{
        https://firebase.google.com/docs/web/setup#config-web-app -->
   <script defer src="init-firebase.js"></script>
   <script defer src="app.js"></script>
+  
+<script>  
+  $(window).ready(function(){
+
+     $("#edit-dialog").find("#general-regex-dialog-questions").hide();
+     //or
+     $("#edit-dialog").find("#general-regex-dialog-questions").css({"display": "none"});
+});
+  </script>  
+  
 </body>
 </html>
