@@ -44,11 +44,17 @@ function observer(){
       console.log(`Usuario activo: ${email}, Estado: ${emailVerified}`)
     } else {
       console.log('Ningun Usuario Activo')
-      content.innerHTML = "Bienvenido al sistema de registro y descarga de documentación, por favor sigue las siguientes instrucciones:
-1. Haz clic en el botón "Quiero registrar..." en la parte superior para proceder al registro del/la menor de edad a tu cargo.
-2. Una vez registrado, tendrás acceso a descargar la documentación legal, solo escribe tu correo registrado y haz clic en "Descargar documentos", una vez descargado el documento en formato PDF, debes imprimirlo y firmarlo.
-3. Revisa y completa la documentación que se describe al final del documento descargado, y adjúntala a los documentos que entregarás a tu diputado.</li>
-4. Repite el proceso por cada menor que desees registrar."
+      content.innerHTML = " `
+      <div class="container mt-5">
+        <div class="card">
+          <h5 class="card-header">Bienvenido, sigue las instrucciones</h5>
+          <div class="card-body">
+            <h5 class="card-title">Aqui va</h5>
+            <p class="card-text">Instruccion dos</a></p>
+          </div>
+        </div>
+      </div>
+    `;"
       // User is signed out.
       // ...
     }
