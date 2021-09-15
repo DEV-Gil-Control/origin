@@ -44,12 +44,12 @@ function observer(){
       console.log(`Usuario activo: ${email}, Estado: ${emailVerified}`)
     } else {
       console.log('Ningun Usuario Activo')
-      content.innerHTML = "`
+      content.innerHTML = "
       <div class="container mt-5">
         <div class="card">
         </div>
       </div>
-    `;"       
+    "       
       // User is signed out.
       // ...
     }
