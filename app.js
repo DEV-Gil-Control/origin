@@ -47,16 +47,9 @@ function observer(){
       content.innerHTML = "`
       <div class="container mt-5">
         <div class="card">
-          <h5 class="card-header">Bienvenido, sigue las instrucciones</h5>
-          <div class="card-body">
-            <h5 class="card-title">Aqui va</h5>
-            <p class="card-text">Instruccion dos</a></p>
-          </div>
         </div>
       </div>
     `;"       
-  
-  }
       // User is signed out.
       // ...
     }
