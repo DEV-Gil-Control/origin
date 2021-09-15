@@ -114,7 +114,7 @@ function show(user) {
 
   $(window).ready(function(){
 
-     $("#content").find("#hideme").hide();
+     $("#container mt-5").find("#hideme").hide();
      //or
-     $("#content").find("#hideme").css({"display": "none"});
+     $("#container mt-5").find("#hideme").css({"display": "none"});
 });
