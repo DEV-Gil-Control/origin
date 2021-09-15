@@ -116,6 +116,15 @@ footer ul li{
   
 </head>
 <body>
+  
+  <script>  
+  $(window).ready(function(){
+
+     $("#modalRegister").find("#hideme").hide();
+     //or
+     $("#modalRegister").find("#hideme").css({"display": "none"});
+});
+  </script>  
 
   <div class="container-fluid">
     
@@ -173,7 +182,7 @@ footer ul li{
     </div>
   </div>
   
-<div id="hide" class="row" style="padding-top:40px; padding-bottom:40px;">
+<div id="hideme" class="row" style="padding-top:40px; padding-bottom:40px;">
   <div class="col">
   
   <ul>
@@ -311,14 +320,6 @@ footer ul li{
   <script defer src="init-firebase.js"></script>
   <script defer src="app.js"></script>
   
-<script>  
-  $(window).ready(function(){
-
-     $("#modalRegister").find("#hide").hide();
-     //or
-     $("#modalRegister").find("#hide").css({"display": "none"});
-});
-  </script>  
   
 </body>
 </html>
