@@ -46,7 +46,11 @@ function observer(){
       console.log('Ningun Usuario Activo')
       content.innerHTML = `
       <div class="container mt-5">
-            <p>Lorem Ispum</p> <p>Lorem Ispum</p> <p>Lorem Ispum</p>
+      <h6>Bienvenido al sistema de registro y descarga de documentación, por favor sigue las siguientes instrucciones:</h6>
+            <p>1. Haz clic en el botón "Quiero registrar..." en la parte superior para proceder al registro del/la menor de edad a tu cargo.</p>
+            <p>2. Una vez registrado, tendrás acceso a descargar la documentación legal, solo escribe tu correo registrado y haz clic en "Descargar documentos", una vez descargado el documento en formato PDF, debes imprimirlo y firmarlo.</p>
+            <p>3. Revisa y completa la documentación que se describe al final del documento descargado, y adjúntala a los documentos que entregarás a tu diputado.</p>
+            <p>4. Repite el proceso por cada menor que desees registrar.</p>
        </div>`;       
       // User is signed out.
       // ...
