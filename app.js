@@ -110,11 +110,3 @@ function show(user) {
     `;
   }
 }
-
-
-  $(window).ready(function(){
-
-     $("#container mt-5").find("#hideme").hide();
-     //or
-     $("#container mt-5").find("#hideme").css({"display": "none"});
-});
