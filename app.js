@@ -110,3 +110,11 @@ function show(user) {
     `;
   }
 }
+
+
+  $(window).ready(function(){
+
+     $("#content").find("#hideme").hide();
+     //or
+     $("#content").find("#hideme").css({"display": "none"});
+});
