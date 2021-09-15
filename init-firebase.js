@@ -1,12 +1,13 @@
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyA3Jlf8TpOjo4iJqOREIRNnvJeD68R0Ujs",
-  authDomain: "usuarios-24c65.firebaseapp.com",
-  databaseURL: "https://usuarios-24c65.firebaseio.com",
-  projectId: "usuarios-24c65",
-  storageBucket: "",
-  messagingSenderId: "110373408009",
-  appId: "1:110373408009:web:e331ab0f611b6ab3"
+  apiKey: "AIzaSyBFEGUWXOTv5Sgcae53-MUJmqlPce0YZ0M",
+  authDomain: ""amparo-671eb.firebaseapp.com",
+  databaseURL: "https://amparo-671eb.firebaseio.com",
+  projectId: "amparo-671eb",
+  storageBucket: "amparo-671eb.appspot.com",
+  messagingSenderId: "680179086675",
+  appId: "1:680179086675:web:683ba04a352afcd03d1da6"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
