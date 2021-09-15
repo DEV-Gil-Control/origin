@@ -88,8 +88,8 @@ function show(user) {
         <div class="card">
           <h5 class="card-header">Bienvenido ${user.email}</h5>
           <div class="card-body">
-            <h5 class="card-title">Enhorabuena</h5>
-            <p class="card-text">Ya estas verificado...</p>
+            <h5 class="card-title">Gracias por registrarte</h5>
+            <p class="card-text"><a href="https://chaledelafuente.com/docs/AMP-MENORES-DIPUTADOS-PAN.pdf">Ya puedes descargar aqui el formato de amparo</a></p>
             <button class="btn btn-outline-dark" onclick="singOut()">Cerrar</button>
           </div>
         </div>
