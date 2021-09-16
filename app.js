@@ -14,7 +14,7 @@ function register(){
 }
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
-
+function datos() {
 
 var push_to_firebase = function(data){
         alert("Thanks for sending a message. I'll try and get back to you as soon as possible.")
@@ -42,7 +42,8 @@ var push_to_firebase = function(data){
         push_to_firebase(data);
 
       }
-function datos() {
+      
+
       document.getElementById("submit_msg").addEventListener("click", contact_submit);
  };
 
