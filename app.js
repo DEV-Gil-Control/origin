@@ -21,7 +21,7 @@ var push_to_firebase = function(data){
         var db = firebase.firestore();
 
         db.collection("messages").add({
-            name: data["nombret"],
+            nombret: data["nombret"],
             timestamp: Date.now()
         })
         .then(function(docRef) {
