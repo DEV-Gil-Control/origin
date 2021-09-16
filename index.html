@@ -170,15 +170,16 @@ footer ul li{
                   <h5 class="modal-title" id="modalRegisterUser">Datos del niño/niña</h5>
                   </div>
         
-          <form id="contactForm">
-          <p class="name-field">
-          <label>Name <span>*</span></label>
-          <input type="text" name="name" id="name" required>
-        </p>
-      </form>
-
+                      
+        
+     <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name..">
+    </form>
+        
+        
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary btn-sm" onclick="register()">Guardar</button>
+          <button id="submit_msg" type="button class="btn btn-primary btn-sm" onclick="register()">Guardar</button>
         </div>
       </div>
     </div>
