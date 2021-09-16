@@ -16,30 +16,43 @@ function register(){
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
-//listen for submit event//
-document.getElementById('registrationform').addEventListener('submit', formSubmit);
+//Reference for form collection(3)
+let formMessage = firebase.database().ref('register');
 
-//Submit form
+//listen for submit event//(1)
+document
+  .getElementById('registrationform')
+  .addEventListener('submit', formSubmit);
+
+//Submit form(1.2)
 function formSubmit(e) {
   e.preventDefault();
   // Get Values from the DOM
   let name = document.querySelector('#name').value;
-    
- //Form Reset After Submission
+
+  //send message values
+  sendMessage(name);
+
+  //Show Alert Message(5)
+  document.querySelector('.alert').style.display = 'block';
+
+  //Hide Alert Message After Seven Seconds(6)
+  setTimeout(function() {
+    document.querySelector('.alert').style.display = 'none';
+  }, 7000);
+
+  //Form Reset After Submission(7)
   document.getElementById('registrationform').reset();
-    
- //Reference for form collection(3)
-let formMessage = firebase.database().ref('register');
+}
 
 //Send Message to Firebase(4)
-function sendMessage(name) {
+
+function sendMessage(name, email, password, bio, job, interest) {
   let newFormMessage = formMessage.push();
   newFormMessage.set({
     name: name
-  });    
-    
- //send message values
-  sendMessage(name);
+  });
+}
     
     
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
