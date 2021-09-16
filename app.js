@@ -16,8 +16,6 @@ function register(){
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
-//Reference for form collection(3)
-let formMessage = firebase.database().ref('register');
 
 //listen for submit event//(1)
 document
