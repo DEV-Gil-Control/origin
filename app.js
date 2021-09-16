@@ -120,7 +120,6 @@ function show(user) {
   }
 }
 
- &lt;script&gt;
     const form = document.getElementById('contactForm'); // Obtenemos la referencia al formulario
 
     if(form){ // Si existe nuestro elemento en memoria este se quedara escuchando al evento submit del formulario
@@ -148,4 +147,4 @@ function show(user) {
         alert('mensaje No guardado'); // En caso de ocurrir un error le mostramos al usuario que ocurrió un error.
       });
   };
-  &lt;script&gt;
+
