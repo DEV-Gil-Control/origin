@@ -174,10 +174,21 @@ footer ul li{
                   <h5 class="modal-title" id="modalRegisterUser">Datos del niño/niña</h5>
                   </div>
         
-        <div class="modal-body">
-          <input  class="form-control form-control-sm mr-sm-2 mb-1" id="nombre" placeholder="Nombre completo" >
-          <input  class="form-control form-control-sm mr-sm-2" id="apaterno" placeholder="Ingresa Contraseña" aria-label="Apellido Paterno">
-        </div>
+      <form id="formularioAlta">
+            <div class="form-group">
+                <label for="ntutor">Nombre</label>
+                <input type="text" class="form-control" id="ntutor" placeholder="Nombre completo">
+            </div>
+            <div class="form-group">
+                <label for="apaternot">Paterno</label>
+                <input type="text" class="form-control" id="apaternot" placeholder="Apellido Paterno">
+            </div>
+            <div class="form-group">
+                <label for="amaternot">Materno</label>
+                <input type="text" class="form-control" id="amaternot" placeholder="Apellido Materno">
+            </div>
+            
+        </form>
         
         <div class="modal-footer">
           <button class="btn btn-primary btn-sm" onclick="register()">Guardar</button>
