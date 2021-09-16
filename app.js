@@ -21,7 +21,6 @@ firebase.initializeApp(firebaseConfig);
         var db = firebase.firestore();
 
         db.collection("messages").add({
-            name: data["correoe"],
             name: data["name"],
             timestamp: Date.now()
         })
@@ -35,12 +34,10 @@ firebase.initializeApp(firebaseConfig);
       }
 
       var contact_submit = function(){
-        var name = document.getElementById("correoe");
         var name = document.getElementById("name");
 
         var data = {
           "name": name.value,
-          "correoe": correoe.value,
         }
         push_to_firebase(data);
 
