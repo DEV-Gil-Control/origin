@@ -15,42 +15,50 @@ function register(){
 }
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
-'use strict';
-
-//grab a form
-const form = document.querySelector('.form-inline');
-
-//grab an input
-const inputEmail = form.querySelector('#inputEmail');
-//create a functions to push
-    function firebasePush(input) {
 
 
-        //prevents from braking
-        if (!firebase.apps.length) {
-            firebase.initializeApp(config);
-        }
+// Reference messages collection
+var messagesRef = firebase.database().ref('messages');
 
-        //push itself
-        var mailsRef = firebase.database().ref('nombre').push().set(
-            {
-                nombre: input.value
-            }
-        );
+// Listen for form submit
+document.getElementById('contactForm').addEventListener('submit', submitForm);
 
-    }
+// Submit form
+function submitForm(e){
+  e.preventDefault();
 
-//push on form submit
-    if (form) {
-        form.addEventListener('submit', function (evt) {
-            evt.preventDefault();
-            firebasePush(inputNombre);
+  //Get value
+  var name = getInputVal('name');
 
-            //shows alert if everything went well.
-            return alert('Data Successfully Sent to Realtime Database');
-        })
-    }
-    
+  // Save message
+  saveMessage(name);
+
+  // Show alert
+  document.querySelector('.alert').style.display = 'block';
+
+  // Hide alert after 3 seconds
+  setTimeout(function(){
+    document.querySelector('.alert').style.display = 'none';
+  },3000);
+
+  // Clear form
+  document.getElementById('contactForm').reset();
+}
+
+// Function to get form value
+function getInputVal(id){
+  return document.getElementById(id).value;
+}
+
+// Save message to firebase
+function saveMessage(name){
+  var newMessageRef = messagesRef.push();
+  newMessageRef.set({
+    name: name
+  });
+}
+
+
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
 function login() {
