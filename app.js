@@ -10,10 +10,9 @@ function register(){
       var errorMessage = error.message;
       // ...
       console.log(errorCode , " -" + errorMessage)
-    });
-}
-
-   //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+        
+        
+        //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){
         alert("Thanks for sending a message. I'll try and get back to you as soon as possible.")
@@ -42,13 +41,16 @@ var push_to_firebase = function(data){
 
       }
       
-function enviar(){
       document.getElementById("submit_msg").addEventListener("click", contact_submit);
 
-}
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
           
+        
+    });
+}
+
+   
 
 function login() {
   var email = document.getElementById("email_login").value;
