@@ -129,7 +129,7 @@ function show(user) {
     function contactForm(event) {
       event.preventDefault(); // Prevenimos el comportamiento por defecto de un formulario (Enviar por URL los parametros)
       const nombre = document.getElementById('nombre'); // Obtenemos la referencia a cada uno de nuestros elementos del formulario
-      const email = document.getElementById('apaterno');
+      const apaterno = document.getElementById('apaterno');
       const data = {
         'name': nombre.value,
         'apaterno': email.value,
