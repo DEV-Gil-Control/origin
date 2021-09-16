@@ -120,31 +120,101 @@ function show(user) {
   }
 }
 
-    const form = document.getElementById('contactForm'); // Obtenemos la referencia al formulario
 
-    if(form){ // Si existe nuestro elemento en memoria este se quedara escuchando al evento submit del formulario
-      form.addEventListener('submit', contactForm); // Al momento de enviar el formulario, ejecuta la función "contactform"
-    }
+firebase.initializeApp(config);
 
-    function contactForm(event) {
-      event.preventDefault(); // Prevenimos el comportamiento por defecto de un formulario (Enviar por URL los parametros)
-      const nombre = document.getElementById('nombre'); // Obtenemos la referencia a cada uno de nuestros elementos del formulario
-      const apaterno = document.getElementById('apaterno');
-      const data = {
-        'name': nombre.value,
-        'apaterno': email.value,
-      }; // Creamos un objecto con todos los elementos de nuestro formulario.
-      saveContactForm(data); // Enviamos la información obtenida por el usuario a la función que se encargara de guardar la información en Firebase
-      form.reset(); // borramos todos los campos. 
-    }
+    var database = firebase.database();
 
-  function saveContactForm(data) {
-    firebase.database().ref('contact').push(data) // Hacemos referencia al método database de el SDK y hacemos referencia el nombre del objeto que contendrá nuestros registros y empujamos los nuevos envios de datos
-      .then(function(){
-        alert('mensaje guardado'); // Si la petición es correcta y almaceno los datos mostramos un mensaje al usuario.
-      })
-      .catch(function(){
-        alert('mensaje No guardado'); // En caso de ocurrir un error le mostramos al usuario que ocurrió un error.
-      });
-  };
+    var nombre;
+    var apetrnot;
+    var ametrnot;
 
+    $("#imagen").change(function()
+    {
+        var descriptor=new FileReader();
+        descriptor.readAsDataURL(this.files[0]);
+
+        descriptor.onloadend = function()
+        {
+            imagen=descriptor.result;
+            $("#previsualizacion").attr("src",imagen);
+        };
+    });
+
+
+    $("#formularioAlta").change(function()
+    {
+        articulo=$("#ntutor").val();
+        descripcion=$("#apaternot").val();
+        precio=$("#amaternot").val();
+
+        if (articulo && descripcion && precio)
+        {
+            $("#botonGuardar").prop("disabled",false);
+        }
+        else
+        {
+            $("#botonGuardar").prop("disabled",true);
+        }
+
+    });
+
+
+    $("#botonGuardar").click(function()
+    {
+        articulo=$("#ntutor").val();
+        descripcion=$("#descripcion").val();
+        precio=$("#precio").val();
+
+        if (!imagen)
+        {
+            imagen="NONE";
+        }
+
+        // Indicamos que la referencia base de nuestra base de datos es productos (algo así como el padre)
+        // del que colgarán el resto de nodos hijos.
+        /*
+        var usersRef = new Firebase('https://samplechat.firebaseio-demo.com/users');
+        var fredRef = usersRef.child('fred');
+        var fredFirstNameRef = fredRef.child('name/first');
+        */
+        var referencia=database.ref("productos");
+
+
+        // De la siguiente forma el método sobreescribe los datos
+    /*
+        referencia.set(
+        {
+            ntutor: ntutor,
+            apternot: apternot,
+            amaternot: precio,
+        });
+        */
+
+        // Ahora estamos poniendo el articulo como clave en la colección
+        // De esta manera podremos añadir nuevos articulos o actualizar uno ya existente.
+
+    /*
+        referencia.child(ntutor).set(
+        {
+            ntutor: ntutor,
+            apternot: apternot,
+            amaternot: precio,
+        });
+        */
+
+        // Si queremos permitir que hayas artículos con nombres duplicados entonces tendremos
+        // que decirle a Firebase que utilice otra clave en lugar del nombre del articulo.
+        // Usaremos el método push en lugar de set
+        referencia.push(
+        {
+            ntutor: ntutor,
+            apternot: apternot,
+            amaternot: precio,
+        },function()
+        {
+            alert('El alta se ha realizado correctamente');
+        });
+    });
+
+});
