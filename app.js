@@ -41,9 +41,10 @@ var push_to_firebase = function(data){
         push_to_firebase(data);
 
       }
+      
 function datos() {
       document.getElementById("submit_msg").addEventListener("click", contact_submit);
- });
+ };
 
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
