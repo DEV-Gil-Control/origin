@@ -34,7 +34,7 @@ const inputEmail = form.querySelector('#inputEmail');
         //push itself
         var mailsRef = firebase.database().ref('nombre').push().set(
             {
-                mail: input.value
+                nombre: input.value
             }
         );
 
