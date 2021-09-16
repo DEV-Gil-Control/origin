@@ -14,6 +14,36 @@ function register(){
     });
 }
 
+    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+//listen for submit event//
+document.getElementById('registrationform').addEventListener('submit', formSubmit);
+
+//Submit form
+function formSubmit(e) {
+  e.preventDefault();
+  // Get Values from the DOM
+  let name = document.querySelector('#name').value;
+    
+ //Form Reset After Submission
+  document.getElementById('registrationform').reset();
+    
+ //Reference for form collection(3)
+let formMessage = firebase.database().ref('register');
+
+//Send Message to Firebase(4)
+function sendMessage(name) {
+  let newFormMessage = formMessage.push();
+  newFormMessage.set({
+    name: name
+  });    
+    
+ //send message values
+  sendMessage(name);
+    
+    
+    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
 function login() {
   var email = document.getElementById("email_login").value;
   var password = document.getElementById("password_login").value;
