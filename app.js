@@ -42,10 +42,10 @@ var push_to_firebase = function(data){
 
       }
       
-
+function enviar(){
       document.getElementById("submit_msg").addEventListener("click", contact_submit);
 
-
+}
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
           
