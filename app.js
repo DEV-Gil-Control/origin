@@ -216,5 +216,3 @@ firebase.initializeApp(config);
             alert('El alta se ha realizado correctamente');
         });
     });
-
-});
