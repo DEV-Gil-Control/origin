@@ -21,7 +21,7 @@ var push_to_firebase = function(data){
         var db = firebase.firestore();
 
         db.collection("messages").add({
-            nombret: data["nombret"],
+            name: data["name"],
             timestamp: Date.now()
         })
         .then(function(docRef) {
@@ -34,15 +34,14 @@ var push_to_firebase = function(data){
       }
 
       var contact_submit = function(){
-        var name = document.getElementById("nombret");
+        var name = document.getElementById("name");
+
         var data = {
-          "nombret": nombret.value,
+          "name": name.value,
         }
         push_to_firebase(data);
 
       }
-
-      document.getElementById("submit_msg").addEventListener("click", contact_submit);
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
