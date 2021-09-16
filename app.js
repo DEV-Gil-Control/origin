@@ -1,5 +1,4 @@
 function register(){
-    firebase.initializeApp(firebaseConfig);
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     console.log( email , password);
@@ -16,6 +15,7 @@ function register(){
 }
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+    firebase.initializeApp(firebaseConfig);
 
 var push_to_firebase = function(data){
         alert("Thanks for sending a message. I'll try and get back to you as soon as possible.")
