@@ -15,7 +15,13 @@ function register(){
 }
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+'use strict';
 
+//grab a form
+const form = document.querySelector('.form-inline');
+
+//grab an input
+const inputEmail = form.querySelector('#inputEmail');
 //create a functions to push
     function firebasePush(input) {
 
