@@ -1,7 +1,7 @@
 function register(){
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
-
+    firebase.initializeApp(config);
     console.log( email , password);
 
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
@@ -121,7 +121,7 @@ function show(user) {
 }
 
 
-firebase.initializeApp(config);
+
 
     var database = firebase.database();
 
