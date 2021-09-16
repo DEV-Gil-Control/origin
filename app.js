@@ -16,35 +16,6 @@ firebase.initializeApp(firebaseConfig);
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
-      var push_to_firebase = function(data){
-        alert("Thanks for sending a message. I'll try and get back to you as soon as possible.")
-        var db = firebase.firestore();
-
-        db.collection("messages").add({
-            name: data["name"],
-            timestamp: Date.now()
-        })
-        .then(function(docRef) {
-            console.log("Message sent, ID: ", docRef.id);
-            location.reload();
-        })
-        .catch(function(error) {
-            console.error("Message could not be sent: ", error);
-        });
-      }
-
-      var contact_submit = function(){
-        var name = document.getElementById("name");
-
-        var data = {
-          "name": name.value,
-        }
-        push_to_firebase(data);
-
-      }
-
-      document.getElementById("submit_msg").addEventListener("click", contact_submit);
-
 
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
