@@ -17,46 +17,37 @@ function register(){
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
 
-// Reference messages collection
-var messagesRef = firebase.database().ref('messages');
+firebase.initializeApp(firebaseConfig);
 
-// Listen for form submit
-document.getElementById('contactForm').addEventListener('submit', submitForm);
+      var push_to_firebase = function(data){
+        alert("Thanks for sending a message. I'll try and get back to you as soon as possible.")
+        var db = firebase.firestore();
 
-// Submit form
-function submitForm(e){
-  e.preventDefault();
+        db.collection("messages").add({
+            name: data["name"],
+            timestamp: Date.now()
+        })
+        .then(function(docRef) {
+            console.log("Message sent, ID: ", docRef.id);
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
 
-  //Get value
-  var name = getInputVal('name');
+      var contact_submit = function(){
+        var name = document.getElementById("name");
 
-  // Save message
-  saveMessage(name);
+        var data = {
+          "name": name.value,
+        }
+        push_to_firebase(data);
 
-  // Show alert
-  document.querySelector('.alert').style.display = 'block';
+      }
 
-  // Hide alert after 3 seconds
-  setTimeout(function(){
-    document.querySelector('.alert').style.display = 'none';
-  },3000);
-
-  // Clear form
-  document.getElementById('contactForm').reset();
-}
-
-// Function to get form value
-function getInputVal(id){
-  return document.getElementById(id).value;
-}
-
-// Save message to firebase
-function saveMessage(name){
-  var newMessageRef = messagesRef.push();
-  newMessageRef.set({
-    name: name
-  });
-}
+      document.getElementById("submit_msg").addEventListener("click", contact_submit);
+    })();
 
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
