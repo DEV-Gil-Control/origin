@@ -191,6 +191,33 @@ function show(user) {
             <p class="card-text">Ingresa a tu cuenta de correo registrada y verifica tu cuenta por favor.</p> 
             <p class="card-text"><a href="https://chaledelafuente.com/docs/AMP-MENORES-DIPUTADOS-PAN.pdf">Recomendamos registrar tu correo, puedes descargar aqui el formato de amparo</p>    
            <button class="btn btn-outline-dark" onclick="singOut()">Cerrar</button>
+           <div class="modal-header">
+                  <h5 class="modal-title" id="modalRegisterUser">Datos del niño/niña</h5>
+                  </div>
+    <form style="padding-left:5px;">
+      <label for="namemenor"></label>
+      <input type="text" id="namemenor" name="namemenor" placeholder="Nombre completo" style="width: 95.5%; margin-top:10px;">
+      
+      <label for="apaternomenor"></label>
+      <input type="text" id="apaternomenor" name="apaternomenor" placeholder="Apellido Paterno" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
+      
+      <label for="amaternomenor"></label>
+      <input type="text" id="amaternomenor" name="amaternomenor" placeholder="Apellido Materno" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
+      
+      <label for="curpmenor"></label>
+      <input type="text" id="curpmenor" name="curpmenor" placeholder="CURP" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
+      <p style="width: 95.5%; padding-left: 5px; margin-top:5px;"><a href="https://www.gob.mx/curp/">Si no conoces su curp puedes obtenerlo aquí</a></p>
+      
+                 <div class="modal-header">
+                 <h5 class="modal-title" id="modalRegisterUser">Datos del tutor que envía el amapro</h5>
+                 </div>
+                  </form>
+                  
+                   <div class="modal-footer">
+          
+          <button class="btn btn-primary btn-sm" onclick="contact_submit();">Guardar</button>
+        </div>
+                  
           </div>
         </div>
       </div>
