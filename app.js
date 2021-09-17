@@ -174,7 +174,6 @@ function show(user) {
           <h5 class="card-header">Bienvenido ${user.email}</h5>
           <div class="card-body">
             <h5 class="card-title">Gracias por registrarte</h5>
-            <p class="card-text"><a href="https://chaledelafuente.com/docs/AMP-MENORES-DIPUTADOS-PAN.pdf">Ya puedes descargar aqui el formato de amparo</a></p>
             <button class="btn btn-outline-dark" onclick="singOut()">Cerrar Sesión</button>
           </div>
         </div>
@@ -187,10 +186,11 @@ function show(user) {
           <h5 class="card-header">Bienvenido ${user.email}</h5>
           <div class="card-body">
             <p class="card-text">Ingresa a tu cuenta de correo registrada y verifica tu cuenta por favor.</p> 
-          <button class="btn btn-outline-dark" onclick="singOut()">Cerrar Sesión</button>
+         
           <div class="container mt-5"> 
            <div class="modal-header">
                   <h5 class="modal-title" id="modalRegisterUser">Para registrar a otro menor, ingresa los datos del nuevo niño/niña:</h5>
+                   <button class="btn btn-outline-dark" onclick="singOut()">Haz Click Aquí Si Deseas Cerrar Esta Sesión</button>
                   </div>
     <form style="padding-left:5px;">
   
