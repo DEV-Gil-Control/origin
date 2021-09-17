@@ -190,7 +190,6 @@ function show(user) {
           <div class="container mt-5"> 
            <div class="modal-header">
                   <h5 class="modal-title" id="modalRegisterUser">Para registrar a otro menor, ingresa los datos del nuevo niño/niña:</h5>
-                   <button class="btn btn-outline-dark" onclick="singOut()">Haz Click Aquí Si Deseas Cerrar Esta Sesión</button>
                   </div>
     <form style="padding-left:5px;">
   
@@ -216,7 +215,7 @@ function show(user) {
           
           <button class="btn btn-primary btn-sm" onclick="contact_submit();">Guardar</button>
         </div>
-
+ <button class="btn btn-outline-dark" onclick="singOut()">Haz Click Aquí Si Deseas Cerrar Esta Sesión</button>
              </div>     
           </div>
         </div>
