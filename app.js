@@ -25,6 +25,16 @@ var push_to_firebase = function(data){
             apaternomenor: data["apaternomenor"],
             amaternomenor: data["amaternomenor"],
             curpmenor: data["curpmenor"],
+              nametutor: data["nametutor"],
+              apaternotutor: data["apaternotutor"],
+              amaternotutor: data["amaternotutor"],
+              domiciliotutor: data["domiciliotutor"],
+              coloniatutor: data["coloniatutor"],
+              cptutor: data["cptutor"],
+              mpiotutor: data["mpiotutor"],
+              teltutor: data["teltutor"],
+              celtutor: data["celtutor"],
+              redtutor: data["redtutor"],
             timestamp: Date.now()
         })
         .then(function(docRef) {
@@ -40,13 +50,33 @@ var push_to_firebase = function(data){
         var namemenor = document.getElementById("namemenor");
         var apaternomenor = document.getElementById("apaternomenor");
         var amaternomenor = document.getElementById("amaternomenor");
-        var curpmenor = document.getElementById("curpmenor");    
+        var curpmenor = document.getElementById("curpmenor");  
+          var nametutor = document.getElementById("nametutor");
+          var apaternotutor = document.getElementById("apaternotutor");
+          var amaternotutor = document.getElementById("amaternotutor");
+          var domiciliotutor = document.getElementById("cdomiciliotutor");
+          var coloniatutor = document.getElementById("coloniatutor");
+          var cptutor = document.getElementById("cptutor");
+          var mpiotutor = document.getElementById("mpiotutor");
+          var teltutor = document.getElementById("teltutor");
+          var celtutor = document.getElementById("celtutor");
+          var redtutor = document.getElementById("redtutor");
 
         var data = {
           "namemenor": namemenor.value,
           "apaternomenor": apaternomenor.value,
           "amaternomenor": amaternomenor.value,
-          "curpmenor": amaternomenor.value  
+          "curpmenor": curpmenor.value,
+            "nametutor": nametutor.value,
+            "apaternotutor": apaternotutor.value,
+            "amaternotutor": amaternotutor.value,
+            "domiciliotutor": domiciliotutor.value,
+            "coloniatutor": coloniatutor.value,
+            "cptutor": cptutor.value,
+            "mpiotutor": mpiotutor.value,
+            "teltutor": teltutor.value,
+            "celtutor": celtutor.value,
+            "redtutor": redtutor.value
         }
         push_to_firebase(data);
           
