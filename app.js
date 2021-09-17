@@ -189,7 +189,7 @@ function show(user) {
           <h5 class="card-header">Bienvenido ${user.email}</h5>
           <div class="card-body">
             <p class="card-text">Ingresa a tu cuenta de correo registrada y verifica tu cuenta por favor.</p> 
-            <p class="card-text"><a href="https://chaledelafuente.com/docs/AMP-MENORES-DIPUTADOS-PAN.pdf">Recomendamos registrar tu correo, puedes descargar aqui el formato de amparo</p>    
+            <p><a href="https://chaledelafuente.com/docs/AMP-MENORES-DIPUTADOS-PAN.pdf">Recomendamos registrar tu correo, puedes descargar aqui el formato de amparo</p>    
            <button class="btn btn-outline-dark" onclick="singOut()">Cerrar</button>
            <div class="modal-header">
                   <h5 class="modal-title" id="modalRegisterUser">Datos del niño/niña</h5>
