@@ -22,6 +22,9 @@ var push_to_firebase = function(data){
 
         db.collection("messages").add({
             namemenor: data["namemenor"],
+            apaternomenor: data["apaternomenor"],
+            amaternomenor: data["amaternomenor"],
+            curpmenor: data["curpmenor"],
             timestamp: Date.now()
         })
         .then(function(docRef) {
@@ -35,11 +38,18 @@ var push_to_firebase = function(data){
 
       var contact_submit = function(){
         var namemenor = document.getElementById("namemenor");
+        var apaternomenor = document.getElementById("apaternomenor");
+        var amaternomenor = document.getElementById("amaternomenor");
+        var curpmenor = document.getElementById("curpmenor");    
 
         var data = {
           "namemenor": namemenor.value,
+          "apaternomenor": apaternomenor.value,
+          "amaternomenor": amaternomenor.value,
+          "curpmenor": amaternomenor.value,  
         }
         push_to_firebase(data);
+          
 
       }
       
