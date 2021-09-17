@@ -184,10 +184,10 @@ function show(user) {
     content.innerHTML = `
       <div class="container mt-5">
         <div class="card">
-          <h5 class="card-header"><div>Bienvenido ${user.email}</h5> <button class="btn btn-outline-dark" onclick="singOut()">Cerrar</button></div>
+          <h5 class="card-header">Bienvenido ${user.email}</h5>
           <div class="card-body">
             <p class="card-text">Ingresa a tu cuenta de correo registrada y verifica tu cuenta por favor.</p> 
-          
+          <button class="btn btn-outline-dark" onclick="singOut()">Cerrar</button>
           <div class="container mt-5"> 
            <div class="modal-header">
                   <h5 class="modal-title" id="modalRegisterUser">Para registrar a otro menor, ingresa los datos del nuevo niño/niña:</h5>
