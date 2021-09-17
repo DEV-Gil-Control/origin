@@ -184,7 +184,7 @@ function show(user) {
     content.innerHTML = `
       <div class="container mt-5">
         <div class="card">
-          <h5 class="card-header">Bienvenido ${user.email}</h5><button class="btn btn-outline-dark" onclick="singOut()">Cerrar</button>
+          <h5 class="card-header">Bienvenido ${user.email}</h5><div><button class="btn btn-outline-dark" onclick="singOut()">Cerrar</button></div>
           <div class="card-body">
             <p class="card-text">Ingresa a tu cuenta de correo registrada y verifica tu cuenta por favor.</p> 
             <p><a href="https://chaledelafuente.com/docs/AMP-MENORES-DIPUTADOS-PAN.pdf">Recomendamos registrar tu correo, puedes descargar aqui el formato de amparo</p>    
