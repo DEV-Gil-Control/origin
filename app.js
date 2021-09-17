@@ -131,13 +131,6 @@ function observer(){
             <p>4. Repite el proceso por cada menor que desees registrar.</p>
        </div></div></div></div>`;       
       // User is signed out.
-        content.innerHTML = `
-      <div class="container mt-5">
-        <div class="card">
-          <h5 class="card-header">Saliste del sistema de registro y descarga de documentación.</h5>
-          <div class="card-body">
-            <p>Gracias, tu participación engrandece a Nuevo León.</p>
-       </div></div></div></div>`;  
       // ...
     }
   });
