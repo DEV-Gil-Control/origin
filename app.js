@@ -216,7 +216,7 @@ function show(user) {
           
           <button class="btn btn-primary btn-sm" onclick="contact_submit();">Guardar</button>
         </div>
-        <embed src="https://chaledelafuente.com/docs/AMP-MENORES-DIPUTADOS-PAN.pdf" width="800px" height="2100px" />
+
              </div>     
           </div>
         </div>
