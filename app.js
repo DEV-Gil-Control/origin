@@ -46,7 +46,7 @@ var push_to_firebase = function(data){
           "namemenor": namemenor.value,
           "apaternomenor": apaternomenor.value,
           "amaternomenor": amaternomenor.value,
-          "curpmenor": amaternomenor.value,  
+          "curpmenor": amaternomenor.value  
         }
         push_to_firebase(data);
           
