@@ -141,6 +141,13 @@ function singOut(){
   firebase.auth().signOut().then(function() {
     // Sign-out successful.
     console.log(' Saliendo... ')
+      content.innerHTML = `
+      <div class="container mt-5">
+        <div class="card">
+          <h5 class="card-header">Bienvenido al sistema de registro y descarga de documentación, por favor sigue las siguientes instrucciones:</h5>
+          <div class="card-body">
+            <p>Gracias, tu participación engrandece a Nuevo León.</p>
+       </div></div></div></div>`;  
   }).catch(function(error) {
     // An error happened.
     var errorCode = error.code;
@@ -188,7 +195,7 @@ function show(user) {
           <div class="card-body">
             <p class="card-text">Ingresa a tu cuenta de correo registrada y verifica tu cuenta por favor.</p> 
             <p class="card-text"><a href="https://chaledelafuente.com/docs/AMP-MENORES-DIPUTADOS-PAN.pdf">Recomendamos registrar tu correo, puedes descargar aqui el formato de amparo</p>    
-           // <button class="btn btn-outline-dark" onclick="singOut()">Cerrar</button>
+           <button class="btn btn-outline-dark" onclick="singOut()">Cerrar</button>
           </div>
         </div>
       </div>
