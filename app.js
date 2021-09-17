@@ -198,7 +198,7 @@ function show(user) {
       <input type="text" id="email" name="email" placeholder="Confirma tu correo registrado" style="width: 95.5%; margin-top:10px;">
   
       <label for="namemenor"></label>
-      <input type="text" id="namemenor" name="namemenor" placeholder="Nombre completo" style="width: 95.5%; margin-top:5px; margin-left:10px;">
+      <input type="text" id="namemenor" name="namemenor" placeholder="Nombre completo" style="width: 95.5%; margin-top:5px; margin-left:4px;">
       
       <label for="apaternomenor"></label>
       <input type="text" id="apaternomenor" name="apaternomenor" placeholder="Apellido Paterno" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
