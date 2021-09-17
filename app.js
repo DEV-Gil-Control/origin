@@ -34,7 +34,7 @@ var push_to_firebase = function(data){
       }
 
       var contact_submit = function(){
-        var name = document.getElementById("name");
+        var name = document.getElementById("namemenor");
 
         var data = {
           "namemenor": namemenor.value,
