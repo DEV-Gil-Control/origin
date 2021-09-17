@@ -193,6 +193,10 @@ function show(user) {
                   <h5 class="modal-title" id="modalRegisterUser">Para registrar a otro menor, ingresa los datos del nuevo niño/niña:</h5>
                   </div>
     <form style="padding-left:5px;">
+  
+      <label for="email"></label>
+      <input type="email" id="nemail" name="email" placeholder="Confirma tu correo registrado" style="width: 95.5%; margin-top:10px;">
+  
       <label for="namemenor"></label>
       <input type="text" id="namemenor" name="namemenor" placeholder="Nombre completo" style="width: 95.5%; margin-top:10px;">
       
