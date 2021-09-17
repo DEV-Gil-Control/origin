@@ -17,7 +17,7 @@ function register(){
         //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){
-        alert("Thanks for sending a message. I'll try and get back to you as soon as possible.")
+        alert("Registro creado exitosamente, continúa para descargar el documento")
         var db = firebase.firestore();
 
         db.collection("messages").add({
