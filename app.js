@@ -21,7 +21,7 @@ var push_to_firebase = function(data){
         var db = firebase.firestore();
 
         db.collection("messages").add({
-            name: data["namemenor"],
+            namemenor: data["namemenor"],
             timestamp: Date.now()
         })
         .then(function(docRef) {
@@ -34,7 +34,7 @@ var push_to_firebase = function(data){
       }
 
       var contact_submit = function(){
-        var name = document.getElementById("namemenor");
+        var namemenor = document.getElementById("namemenor");
 
         var data = {
           "namemenor": namemenor.value,
