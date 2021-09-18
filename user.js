@@ -193,7 +193,9 @@ function show(user) {
             <h5 class="card-title">Gracias por registrarte</h5>
             <div id="menor">
             </div>
-            <button class="btn btn-outline-dark" onclick="singOut()">Cerrar Sesión</button>
+              <div style="padding-top:20px;">
+              <button class="btn btn-outline-dark" onclick="singOut()">Cerrar Sesión</button>
+              </div>
           </div>
         </div>
       </div>
