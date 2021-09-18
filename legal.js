@@ -102,3 +102,32 @@ var push_to_firebase = function(data){
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
+function observer(){
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      show(user);
+      // User is signed in.
+      var displayName = user.displayName;
+      var email = user.email;
+      var emailVerified = user.emailVerified;
+      var photoURL = user.photoURL;
+      var isAnonymous = user.isAnonymous;
+      var uid = user.uid;
+      var providerData = user.providerData;
+      // ...
+      console.log(`Usuario activo: ${email}, Estado: ${emailVerified}`)
+      get_user(email)
+        
+    } else {
+      console.log('Ningun Usuario Activo')
+      content.innerHTML = `
+      <div class="container mt-5">
+        <div class="card">
+          <h5 class="card-header">Saliendo....</h5>
+          </div></div></div>`;       
+      // User is signed out.
+      // ...
+    }
+  });
+}
+observer();
