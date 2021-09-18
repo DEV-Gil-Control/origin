@@ -181,7 +181,7 @@ function show(user) {
       <div class="container mt-5">
         <div class="card">
           <h5 class="card-header">Bienvenido</h5>
-            <div id="bientutor" style="margin-left:22px; margin-top:50px; font-weight: bold;">
+            <div id="bientutor" style="margin-left:22px; margin-top:20px; font-weight: bold;">
             </div>
           <div class="card-body">
             <h5 class="card-title">Gracias participar en el Amparo Colectivo: Vacunas COVID-19 para menores de edad</h5>
