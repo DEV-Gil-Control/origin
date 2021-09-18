@@ -23,8 +23,9 @@ var get_user = function(email) {
    // doc.data() is never undefined for query doc snapshots
    console.log(doc.id, " => ", doc.data());
        var menor = document.getElementById("menor");
-       menor.innerHTML = doc.id;
-        });
+       menor.innerHTML = `<div>ID: ${doc.id}</div>
+       <div>Email: ${doc.email}</div>`;
+        })
     })
    .catch(function(error) {
           console.error(error);
