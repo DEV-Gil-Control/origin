@@ -168,17 +168,7 @@ function show(user) {
   var content = document.getElementById('content');
 
   if (user.emailVerified) {
-    content.innerHTML = `
-      <div class="container mt-5">
-        <div class="card">
-          <h5 class="card-header">Bienvenido ${user.email}</h5>
-          <div class="card-body">
-            <h5 class="card-title">Gracias por registrarte</h5>
-            <button class="btn btn-outline-dark" onclick="singOut()">Cerrar Sesión</button>
-          </div>
-        </div>
-      </div>
-    `;
+    location.href = 'user.html'
   }else{
     content.innerHTML = `
       <div class="container mt-5">
