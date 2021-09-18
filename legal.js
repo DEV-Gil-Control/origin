@@ -24,7 +24,7 @@ var get_user = function(email) {
    .catch(function(error) {
           console.error(error);
         });
- }    
+  
 
 
 //- - - - - - - - -  push data - - - - - - - - - - - -//
