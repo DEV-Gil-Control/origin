@@ -14,8 +14,19 @@ function register(){
 }
 
 //- - - - - - - get data- - - - - - - - - - - - - //
+var get_user = function(email) {
+   var db = firebase.firestore();
+   db.collection("messages").where("email", "==", email) 
+   .get() 
+   .then(function(docRef) {
+         console.log(docRef);
+        })
+   .catch(function(error) {
+          console.error(error);
+        });
+ }    
 
-    
+
 //- - - - - - - - -  push data - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){
@@ -120,6 +131,8 @@ function observer(){
       var providerData = user.providerData;
       // ...
       console.log(`Usuario activo: ${email}, Estado: ${emailVerified}`)
+      get_user(email)
+        
     } else {
       console.log('Ningun Usuario Activo')
       content.innerHTML = `
