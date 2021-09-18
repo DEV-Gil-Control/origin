@@ -179,7 +179,7 @@ function show(user) {
       <div class="container mt-5">
         <div class="card">
           <h5 class="card-header">Bienvenido
-          <div id="tutor"
+          <div id="tutor">
           </h5>
           <div class="card-body">
             <h5 class="card-title">Gracias participar en el Amparo Colectivo: Vacunas COVID-19 para menores de edad</h5>
