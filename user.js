@@ -19,9 +19,11 @@ var get_user = function(email) {
    db.collection("messages").where("email", "==", email) 
    .get() 
    .then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            console.log(doc.id, " => ", doc.data());
+   querySnapshot.forEach((doc) => {
+   // doc.data() is never undefined for query doc snapshots
+   console.log(doc.id, " => ", doc.data());
+       var menor = document.getElementById("menor");
+       menor.innerHTML = doc.id;
         });
     })
    .catch(function(error) {
@@ -188,7 +190,8 @@ function show(user) {
           <h5 class="card-header">Bienvenido ${user.email}</h5>
           <div class="card-body">
             <h5 class="card-title">Gracias por registrarte</h5>
-            <p class="card-text"><a href="https://chaledelafuente.com/docs/AMP-MENORES-DIPUTADOS-PAN.pdf">Ya puedes descargar aqui el formato de amparo</a></p>
+            <div id="menor">
+            </div>
             <button class="btn btn-outline-dark" onclick="singOut()">Cerrar Sesión</button>
           </div>
         </div>
