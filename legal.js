@@ -11,13 +11,6 @@ var get_user = function(email) {
        var menor = document.getElementById("menor");
        menor.innerHTML = `<div>Menor registrado: ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
        <div>CURP: ${doc.data().curpmenor}</div>`;
-       var tutor = document.getElementById("tutor");
-       tutor.innerHTML = `<div>${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
-       <div>Correo Electrónico: ${doc.data().email}</div>
-       <div>Teléfono Celular: ${doc.data().celtutor}</div>`;
-       var bientutor = document.getElementById("bientutor");
-       bientutor.innerHTML = `<div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
-       <div>Correo Electrónico: ${doc.data().email}</div>`;
         })
     })
    .catch(function(error) {
