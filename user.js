@@ -15,14 +15,6 @@ function register(){
 
 //- - - - - - - get data- - - - - - - - - - - - - //
 
-//asynchronously retrieve all documents
-ApiFuture<QuerySnapshot> future = db.collection("messages").get();
-// future.get() blocks on response
-List<QueryDocumentSnapshot> documents = future.get().getDocuments();
-for (QueryDocumentSnapshot document : documents) {
-  System.out.println(document.getId() + " => " + document.toObject(email.class));
-}
-
     
 //- - - - - - - - -  push data - - - - - - - - - - - -//
 
