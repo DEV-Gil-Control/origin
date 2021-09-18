@@ -11,6 +11,7 @@ var get_user = function(email) {
        var todosd = document.getElementById("todosd");
        todosd.innerHTML = `<div>Nombre del padre, madre o tutor: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
        <div>Nombre del menor: ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
+       <div>Edad de el/la menor de edad: ${doc.data().edadmenor}</div>
        <div>CURP: ${doc.data().curpmenor}</div>`;
         })
     })
@@ -31,6 +32,7 @@ var push_to_firebase = function(data){
         db.collection("messages").add({
             email: data["email"],
             namemenor: data["namemenor"],
+           edadmenor: data["edadmenor"],
             apaternomenor: data["apaternomenor"],
             amaternomenor: data["amaternomenor"],
             curpmenor: data["curpmenor"],
@@ -58,6 +60,7 @@ var push_to_firebase = function(data){
       var contact_submit = function(){
            var email = document.getElementById("email");
         var namemenor = document.getElementById("namemenor");
+         var edadmenor = document.getElementById("edadmenor");
         var apaternomenor = document.getElementById("apaternomenor");
         var amaternomenor = document.getElementById("amaternomenor");
         var curpmenor = document.getElementById("curpmenor");  
@@ -75,6 +78,7 @@ var push_to_firebase = function(data){
         var data = {
             "email": email.value,
           "namemenor": namemenor.value,
+           "edadmenor": edadmenor.value,
           "apaternomenor": apaternomenor.value,
           "amaternomenor": amaternomenor.value,
           "curpmenor": curpmenor.value,
