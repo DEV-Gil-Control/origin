@@ -12,7 +12,17 @@ var get_user = function(email) {
        todosd.innerHTML = `<div>Nombre del padre, madre o tutor: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
        <div>Nombre del menor: ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
        <div>Edad de el/la menor de edad: ${doc.data().edadmenor}</div>
-       <div>CURP: ${doc.data().curpmenor}</div>`;
+       <div>CURP: ${doc.data().curpmenor}</div>
+       <div>Domicilio: ${doc.data().domiciliotutor}</div>
+       <div>Colonia: ${doc.data().coloniatutor}</div>
+       <div>Código Postal: ${doc.data().cptutor}</div>
+       <div>Colonia: ${doc.data().coloniatutor}</div>
+       <div>Municipio: ${doc.data().mpiotutor}</div>
+       <div>Correo electrónico: ${doc.data().email}</div>
+       <div>Teléfono de casa u oficina: ${doc.data().teltutor}</div>
+       <div>Celular: ${doc.data().celtutor}</div>
+       <div>Red Social para seguimiento: ${doc.data().redtutor}</div>
+       `;
         })
     })
    .catch(function(error) {
