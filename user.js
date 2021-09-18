@@ -24,7 +24,10 @@ var get_user = function(email) {
    console.log(doc.id, " => ", doc.data());
        var menor = document.getElementById("menor");
        menor.innerHTML = `<div>ID: ${doc.id}</div>
-       <div>Email: ${doc.data().celtutor}</div>`;
+       <div>Nombre del menor: ${doc.data().namemenor}</div>
+       <div>Apellido Paterno: ${doc.data().apaternomenor}</div>
+       <div>Apellido Materno: ${doc.data().amaternomenor}</div>
+       <div>CURP: ${doc.data().curp}</div>`;
         })
     })
    .catch(function(error) {
