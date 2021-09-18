@@ -191,7 +191,7 @@ function show(user) {
     content.innerHTML = `
       <div class="container mt-5">
         <div class="card">
-          <h5 class="card-header">Bienvenido, gracias participar en el Amparo Colectivo: Vacunas COVID-19 para menores de edad</h5>
+          <h5 class="card-header">1. DATOS GENERALES</h5>
             <div id="bientutor" style="margin-left:22px; margin-top:20px; font-weight: bold;">
             </div>
           <div class="card-body">
