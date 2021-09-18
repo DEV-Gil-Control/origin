@@ -181,10 +181,10 @@ function show(user) {
       <div class="container mt-5">
         <div class="card">
           <h5 class="card-header">Bienvenido</h5>
+                      <div id="bientutor" style="font-weight: bold;">
+            </div>
           <div class="card-body">
             <h5 class="card-title">Gracias participar en el Amparo Colectivo: Vacunas COVID-19 para menores de edad</h5>
-            <div id="bientutor" style="font-weight: bold;">
-            </div>
             <div id="menor">
             </div>
               <div style="padding-top:20px;">
