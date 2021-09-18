@@ -190,7 +190,7 @@ function show(user) {
         <div class="card">
           <h5 class="card-header">Bienvenido ${user.email}</h5>
           <div class="card-body">
-            <h5 class="card-title">Gracias por registrarte</h5>
+            <h5 class="card-title">Gracias participar en el Amparo Colectivo: Vacunas COVID-19 para menores de edad</h5>
             <div id="menor">
             </div>
               <div style="padding-top:20px;">
