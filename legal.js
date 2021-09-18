@@ -8,8 +8,8 @@ var get_user = function(email) {
    querySnapshot.forEach((doc) => {
    // doc.data() is never undefined for query doc snapshots
    console.log(doc.id, " => ", doc.data());
-       var menor = document.getElementById("menor");
-       menor.innerHTML = `<div>Menor registrado: ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
+       var todosd = document.getElementById("todosd");
+       todosd.innerHTML = `<div>Menor registrado: ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
        <div>CURP: ${doc.data().curpmenor}</div>`;
         })
     })
@@ -180,7 +180,7 @@ function show(user) {
             <div id="bientutor" style="margin-left:22px; margin-top:20px; font-weight: bold;">
             </div>
           <div class="card-body">
-            <div id="menor" class="shadow-none p-3 mb-5 bg-light rounded">
+            <div id="todosd" class="shadow-none p-3 mb-5 bg-light rounded">
             </div>
               <div style="padding-top:20px;">
               <button class="btn btn-outline-dark" onclick="singOut()">Cerrar Sesión</button>
