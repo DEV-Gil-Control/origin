@@ -20,10 +20,12 @@ var get_user = function(email) {
        var todos = document.getElementById("todos");
        todos.innerHTML = `<div>Menor registrado: ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
        <div>CURP: ${doc.data().curpmenor}</div>`;
+        })
     })
    .catch(function(error) {
           console.error(error);
         });
+ }    
   
 
 
