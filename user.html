@@ -1,1 +1,340 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Basic user registration with firebase.">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript,Firebase">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <title>Alta y descarga de documentación para amparo colectivo - Vacunas COVID-19 para niños y adolescentes</title>
+  
+  
+  
+  <style>  
+  
+  body{
+    font-family:Tahoma;
+}
+    
+    
+  .navbar-header{
+  background-image: url("https://chaledelafuente.com/imgs/header-amparo-PAN.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+  
+
+footer{
+     background-color: #14387f;
+     padding:70px 0px;
+}	       
+
+footer ul li{
+    padding:5px 0px;
+}
+
+.adress span , .contact span , .social span{
+   color: #FFF; 
+   font-weight: 800; 
+   padding-bottom: 10px; 
+   margin-bottom: 20px;
+   display: block;
+   text-transform: uppercase;
+   font-size: 20px;
+   letter-spacing: 3px;
+}
+ 
+.adress li p , .contact li a , .social li a{
+    color:#FFF;
+    letter-spacing: 2px;
+    text-decoration:none;
+    font-size:15px;
+}
+
+.social li{
+    float:left;
+}
+
+.adress , .contact , .social {
+    list-style: none;
+}
+
+.fa{
+    color:#9c9c9c;
+    margin-right: 15px;
+    font-size:14px;
+}  
+    
+.btn-primary {
+  padding: 5px 30px;
+  border: 0px solid blue;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 1px 6px 12px lightblue, inset -1px -10px 5px darkblue, 1px 2px 1px black;
+  -moz-box-shadow: inset 1px 6px 12px lightblue, inset -1px -10px 5px darkblue, 1px 2px 1px black;
+  box-shadow: inset 1px 6px 12px lightblue, inset -1px -10px 5px darkblue, 1px 2px 1px black;
+  background-color: blue;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}  
+  
+.btn-warning {
+  padding: 5px 30px;
+  border: 0px solid orange;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 1px 6px 12px yellow, inset -1px -10px 5px #CC5200, 1px 2px 1px black;
+  -moz-box-shadow: inset 1px 6px 12px yellow, inset -1px -10px 5px #CC5200, 1px 2px 1px black;
+  box-shadow: inset 1px 6px 12px yellow, inset -1px -10px 5px #CC5200, 1px 2px 1px black;
+  background-color: orange;
+  color: white;
+  text-shadow: 1px 1px 1px #CC5200;
+}  
+  
+ @media screen and (min-width: 1200px) {
+  .navbar-brand {
+    font-size: 40px;
+  }
+}  
+  
+ @media screen and (min-width: 601px) {
+  .navbar-brand {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-brand {
+    font-size: 10px;
+  }
+} 
+  
+</style> 
+  
+  
+</head>
+<body>
+  
+
+
+  <div class="container-fluid">
+    
+   <div class="navbar-header" style="text-align:right;">
+      <a class="navbar-brand" href="#" style="text-align: end";>
+        <img alt="Diputados-PAN" style="max-width:50%;" src="https://chaledelafuente.com/imgs/PAN.png">
+      </a>
+    </div> 
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+      <a class="navbar-brand" href="#">Ingresa aqui si ya estás registrado</a>
+      <div class="form-inline">
+        <!-- Login -->
+        <input class="form-control form-control-sm mr-sm-2" id="email_login" type="email" placeholder="Ingresa email" aria-label="email">
+        <input class="form-control form-control-sm mr-sm-2" id="password_login" type="password" placeholder="Ingresa Contraseña" aria-label="password">
+        <!-- End - Login -->
+        <button class="btn btn-primary my-2 my-sm-0 btn-sm" onclick="login()">Ingresar</button>
+        </button>
+      </div>
+    </nav>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+      <a class="navbar-brand" href="#">Registra a un menor aquí</a>
+      <div class="form-inline">
+        <button class="btn btn-warning my-2 my-sm-0 btn-sm ml-1" type="button" data-toggle="modal" data-target="#modalRegister">
+          Registrar
+        </button>
+      </div>
+    </nav>
+    
+  </div>
+
+  <!-- Modal Register -->
+  <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="modalRegisterUser" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRegisterUser">Datos de Acceso</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input  class="form-control form-control-sm mr-sm-2 mb-1" id="email" type="email" placeholder="Ingresa email" >
+          <input  class="form-control form-control-sm mr-sm-2" id="password" type="password" placeholder="Ingresa Contraseña">
+        </div>
+                  <div class="modal-header">
+                  <h5 class="modal-title" id="modalRegisterUser">Datos del niño/niña</h5>
+                  </div>
+    <form style="padding-left:5px;">
+      <label for="namemenor"></label>
+      <input type="text" id="namemenor" name="namemenor" placeholder="Nombre completo" style="width: 95.5%; margin-top:10px;">
+      
+      <label for="apaternomenor"></label>
+      <input type="text" id="apaternomenor" name="apaternomenor" placeholder="Apellido Paterno" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
+      
+      <label for="amaternomenor"></label>
+      <input type="text" id="amaternomenor" name="amaternomenor" placeholder="Apellido Materno" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
+      
+      <label for="curpmenor"></label>
+      <input type="text" id="curpmenor" name="curpmenor" placeholder="CURP" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
+      <p style="width: 95.5%; padding-left: 5px; margin-top:5px;"><a href="https://www.gob.mx/curp/">Si no conoces su curp puedes obtenerlo aquí</a></p>
+      
+                 <div class="modal-header">
+                 <h5 class="modal-title" id="modalRegisterUser">Datos del tutor que envía el amapro</h5>
+                 </div>
+      
+     
+      <label for="nametutor"></label>
+      <input type="text" id="nametutor" name="nametutor" placeholder="Nombre completo" style="width: 95.5%;">
+      
+      <label for="apaternotutor"></label>
+      <input type="text" id="apaternotutor" name="apaternotutor" placeholder="Apellido Paterno" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
+      
+      <label for="amaternotutor"></label>
+      <input type="text" id="amaternotutor" name="amaternotutor" placeholder="Apellido Materno" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
+      
+      <label for="domiciliotutor"></label>
+      <input type="text" id="domiciliotutor" name="domiciliotutor" placeholder="Domicilio: Calle y Número" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
+      
+      <label for="coloniatutor"></label>
+      <input type="text" id="coloniatutor" name="coloniatutor" placeholder="Colonia" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
+      
+      <label for="cptutor"></label>
+      <input type="text" id="cptutor" name="cptutor" placeholder="Código Postal" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
+      
+      <label for="mpiotutor"></label>
+      <input type="text" id="mpiotutor" name="mpiotutor" placeholder="Municipio" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
+      
+      <label for="teltutor"></label>
+      <input type="text" id="teltutor" name="teltutor" placeholder="Teléfono de casa u oficina" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
+      
+      <label for="celtutor"></label>
+      <input type="text" id="celtutor" name="celtutor" placeholder="Teléfono celular" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
+      
+      <label for="redtutor"></label>
+      <input type="text" id="redtutor" name="redtutor" placeholder="Red social para contacto" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
+      
+    </form>
+        
+        
+               
+
+        
+        <div class="modal-footer">
+          
+          <button class="btn btn-primary btn-sm" onclick="register(); contact_submit();">Guardar</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- End - Modal Register -->
+
+  <div id="content"></div>
+  
+  <div id="espacio" style="margin-bottom: 3rem!important;"> </div>
+  
+      <footer>
+    <div class="container">
+      
+       
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <ul class="adress">
+                     <span>Municipio de Santa Catarina</span>    
+                     <li>
+                        <p>Comité Municipal, Calle Zaragoza #416</p>
+                        <p>Centro de Santa Catarina, N.L.</p>
+                      </li>
+                 </ul>
+              
+              <ul class="adress">
+                     <span>Municipio de Guadalupe</span>    
+                     <li>
+                       <p>Comité Municipal, Independencia #108</p>
+                        <p>Colonia Centro entre Cuauhtémoc y Arteaga</p>
+                      </li>
+                           
+                      <li>
+                        <p>Guadalupe, N.L.</p>
+                      </li>
+                 </ul>
+              
+            </div>
+            
+                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                <ul class="adress">
+                     <span>Municipio de Sabinas Hidalgo</span>    
+                     <li>
+                        <p>Mier y Teran #1301</p>
+                        <p>Colonia Barrio de Sonora</p>
+                        <p>Sabinas Hidalgo, N.L.</p>
+                      </li> 
+                  
+                 </ul>
+                   
+                   <ul class="adress">
+                     <span>Municipio de Monterrey</span>    
+                     <li>
+                        <p>Comité Directivo Estatal</p>
+                        <p>Jerónimo Treviño #440</p>
+                      </li>
+                           
+                      <li>
+                        <p>Centro de Monterrey, N.L.</p>
+                      </li>
+                 </ul>
+                   
+            </div>
+       
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                <ul class="adress">
+                     <span>Municipio de San Nicolás</span>    
+                     <li>
+                        <p>Oficina Enlace del Diputado Cárlos de la Fuente</p>
+                        <p>Jerónimo treviño #407</p>
+                      </li>
+                           
+                      <li>
+                        <p>Centro San Nicolás de los Garza, N.L.</p>
+                      </li>
+                 </ul>
+                
+                <ul class="adress">
+                     <span>Municipio de San Pedro</span>    
+                     <li>
+                        <p>Vasconcelos #308, esquina con Vicente Guerrero</p>
+                        <p>Centro de San Pedro, Garza García, N.L.</p>
+                      </li>
+
+                 </ul>
+                
+            </div>
+       </div> 
+    </div>
+</footer>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+ <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+  
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#config-web-app -->
+  <script defer src="init-firebase.js"></script>
+  <script defer src="user.js"></script>
+                            
+</body>
+</html>
