@@ -34,6 +34,7 @@ var push_to_firebase = function(data){
         db.collection("messages").add({
             email: data["email"],
             namemenor: data["namemenor"],
+           edadmenor: data["edadmenor"],
             apaternomenor: data["apaternomenor"],
             amaternomenor: data["amaternomenor"],
             curpmenor: data["curpmenor"],
@@ -61,6 +62,7 @@ var push_to_firebase = function(data){
       var contact_submit = function(){
            var email = document.getElementById("email");
         var namemenor = document.getElementById("namemenor");
+         var edadmenor = document.getElementById("edademenor");
         var apaternomenor = document.getElementById("apaternomenor");
         var amaternomenor = document.getElementById("amaternomenor");
         var curpmenor = document.getElementById("curpmenor");  
@@ -78,6 +80,7 @@ var push_to_firebase = function(data){
         var data = {
             "email": email.value,
           "namemenor": namemenor.value,
+           "edadmenor": edadmenor.value,
           "apaternomenor": apaternomenor.value,
           "amaternomenor": amaternomenor.value,
           "curpmenor": curpmenor.value,
