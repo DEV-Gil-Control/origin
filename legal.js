@@ -17,6 +17,9 @@ var get_user = function(email) {
        var bientutor = document.getElementById("bientutor");
        bientutor.innerHTML = `<div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
        <div>Correo Electrónico: ${doc.data().email}</div>`;
+       var todos = document.getElementById("todos");
+       todos.innerHTML = `<div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
+       <div>Correo Electrónico: ${doc.data().email}</div>`;
         })
     })
    .catch(function(error) {
