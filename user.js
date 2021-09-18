@@ -15,7 +15,8 @@ var get_user = function(email) {
        <div>Correo Electrónico: ${doc.data().email}</div>
        <div>Teléfono Celular: ${doc.data().celtutor}</div>`;
        var bientutor = document.getElementById("bientutor");
-       bientutor.innerHTML = `<div>${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>`;
+       bientutor.innerHTML = `<div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
+       <div>Correo Electrónico: ${doc.data().email}</div>`;
         })
     })
    .catch(function(error) {
@@ -182,7 +183,7 @@ function show(user) {
           <h5 class="card-header">Bienvenido</h5>
           <div class="card-body">
             <h5 class="card-title">Gracias participar en el Amparo Colectivo: Vacunas COVID-19 para menores de edad</h5>
-            <div id="bientutor">
+            <div id="bientutor" style="font-weight: bold;">
             </div>
             <div id="menor">
             </div>
