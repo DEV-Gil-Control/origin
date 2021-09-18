@@ -123,7 +123,7 @@ function observer(){
       content.innerHTML = `
       <div class="container mt-5">
         <div class="card">
-          <h5 class="card-header">NO DEBIAS VER ESTO</h5>
+          <h5 class="card-header">Saliendo....</h5>
           </div></div></div>`;       
       // User is signed out.
       // ...
