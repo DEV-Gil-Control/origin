@@ -136,7 +136,7 @@ function singOut(){
   firebase.auth().signOut().then(function() {
     // Sign-out successful.
     console.log(' Saliendo... ')
-location.href = 'user.html'      
+location.href = 'index.html'      
   }).catch(function(error) {
     // An error happened.
     var errorCode = error.code;
