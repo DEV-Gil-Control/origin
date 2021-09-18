@@ -178,7 +178,8 @@ function show(user) {
     content.innerHTML = `
       <div class="container mt-5">
         <div class="card">
-          <h5 class="card-header">Bienvenido ${user.email}</h5>
+          <h5 class="card-header">Bienvenido</h5>
+         <h5 class="card-header"> <div id="tutor" style="font-weight: bold;"></div></h5>
           <div class="card-body">
             <h5 class="card-title">Gracias participar en el Amparo Colectivo: Vacunas COVID-19 para menores de edad</h5>
             <div id="menor">
