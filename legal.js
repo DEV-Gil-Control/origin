@@ -1,3 +1,4 @@
+
 //- - - - - - - get data- - - - - - - - - - - - - //
 var get_user = function(email) {
    var db = firebase.firestore();
@@ -17,15 +18,13 @@ var get_user = function(email) {
        var bientutor = document.getElementById("bientutor");
        bientutor.innerHTML = `<div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
        <div>Correo Electrónico: ${doc.data().email}</div>`;
-       var todos = document.getElementById("todos");
-       todos.innerHTML = `<div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
-       <div>Correo Electrónico: ${doc.data().email}</div>`;
         })
     })
    .catch(function(error) {
           console.error(error);
         });
  }    
+
   
 
 
@@ -188,7 +187,7 @@ function show(user) {
             <div id="bientutor" style="margin-left:22px; margin-top:20px; font-weight: bold;">
             </div>
           <div class="card-body">
-            <div id="todos" class="shadow-none p-3 mb-5 bg-light rounded">
+            <div id="menor" class="shadow-none p-3 mb-5 bg-light rounded">
             </div>
               <div style="padding-top:20px;">
               <button class="btn btn-outline-dark" onclick="singOut()">Cerrar Sesión</button>
