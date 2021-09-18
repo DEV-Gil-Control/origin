@@ -131,3 +131,69 @@ function observer(){
   });
 }
 observer();
+
+function singOut(){
+  firebase.auth().signOut().then(function() {
+    // Sign-out successful.
+    console.log(' Saliendo... ')
+location.href = 'index.html'      
+  }).catch(function(error) {
+    // An error happened.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+      // ...
+    console.log(' Codigo de error (${errorCode}), Mensaje de error (${errorMessage})')
+  });
+}
+
+function verification(){
+  var user = firebase.auth().currentUser;
+
+  user.sendEmailVerification().then(function() {
+    // Email sent.
+    console.log(`Enviando correo...`);
+  }).catch(function(error) {
+    // An error happened.
+    console.log(`Error (${error})`);
+
+  });
+}
+
+function show(user) {
+  var user = user;
+  var content = document.getElementById('content');
+
+  if (user.emailVerified) {
+    content.innerHTML = `
+      <div class="container mt-5">
+        <div class="card">
+          <h5 class="card-header">Bienvenido, gracias participar en el Amparo Colectivo: Vacunas COVID-19 para menores de edad</h5>
+            <div id="bientutor" style="margin-left:22px; margin-top:20px; font-weight: bold;">
+            </div>
+          <div class="card-body">
+            <div id="menor" class="shadow-none p-3 mb-5 bg-light rounded">
+            </div>
+              <div style="padding-top:20px;">
+              <button class="btn btn-outline-dark" onclick="singOut()">Cerrar Sesión</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }else{
+    content.innerHTML = `
+      <div class="container mt-5">
+        <div class="card">
+          <h5 class="card-header">Bienvenido ${user.email}</h5>
+          <div class="card-body">
+            <p class="card-text">Ingresa a tu cuenta de correo registrada y verifica tu cuenta por favor.</p> 
+         
+          
+ <button class="btn btn-outline-dark" onclick="singOut()">Haz Click Aquí Si Deseas Cerrar Esta Sesión</button>
+             </div>     
+          </div>
+        </div>
+      </div>
+    `;
+  }
+}
