@@ -187,34 +187,7 @@ function show(user) {
           <div class="card-body">
             <p class="card-text">Ingresa a tu cuenta de correo registrada y verifica tu cuenta por favor.</p> 
          
-          <div class="container mt-5"> 
-           <div class="modal-header">
-                  <h5 class="modal-title" id="modalRegisterUser">Para registrar a otro menor, ingresa los datos del nuevo niño/niña:</h5>
-                  </div>
-    <form style="padding-left:5px;">
-  
-      <label for="email"></label>
-      <input type="text" id="email" name="email" placeholder="Confirma tu correo registrado" style="width: 95.5%; margin-top:10px;">
-  
-      <label for="namemenor"></label>
-      <input type="text" id="namemenor" name="namemenor" placeholder="Nombre completo" style="width: 95.5%; margin-top:5px; margin-left:4px;">
-      
-      <label for="apaternomenor"></label>
-      <input type="text" id="apaternomenor" name="apaternomenor" placeholder="Apellido Paterno" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
-      
-      <label for="amaternomenor"></label>
-      <input type="text" id="amaternomenor" name="amaternomenor" placeholder="Apellido Materno" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
-      
-      <label for="curpmenor"></label>
-      <input type="text" id="curpmenor" name="curpmenor" placeholder="CURP" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
-      <p style="width: 95.5%; padding-left: 5px; margin-top:5px;"><a href="https://www.gob.mx/curp/">Si no conoces su curp puedes obtenerlo aquí</a></p>
-      
-                  </form>
-                  
-                   <div class="modal-footer">
           
-          <button class="btn btn-primary btn-sm" onclick="contact_submit();">Guardar</button>
-        </div>
  <button class="btn btn-outline-dark" onclick="singOut()">Haz Click Aquí Si Deseas Cerrar Esta Sesión</button>
              </div>     
           </div>
