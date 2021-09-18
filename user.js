@@ -27,8 +27,8 @@ var get_user = function(email) {
        <div>CURP: ${doc.data().curpmenor}</div>`;
        var tutor = document.getElementById("tutor");
        tutor.innerHTML = `<div>${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
-       <div>Correo Electrónico: ${doc.data().email}</div>`;
-       <div>Celular: ${doc.data().celtutor}</div>`;
+       <div>Correo Electrónico: ${doc.data().email}</div>
+       <div>Teléfono Celular: ${doc.data().celtutor}</div>
        `;
         })
     })
