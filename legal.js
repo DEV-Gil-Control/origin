@@ -191,7 +191,7 @@ function show(user) {
     content.innerHTML = `
       <div class="container mt-5">
         <div class="card">
-          <h5 class="card-header">1. DATOS GENERALES</h5>
+          <h3 class="card-header">1. DATOS GENERALES</h3>
             <div id="bientutor" style="margin-left:22px; margin-top:20px; font-weight: bold;">
             </div>
           <div class="card-body">
