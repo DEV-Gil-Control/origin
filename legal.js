@@ -187,7 +187,7 @@ function show(user) {
             <div id="bientutor" style="margin-left:22px; margin-top:20px; font-weight: bold;">
             </div>
           <div class="card-body">
-            <div id="legal" class="shadow-none p-3 mb-5 bg-light rounded">
+            <div id="menor" class="shadow-none p-3 mb-5 bg-light rounded">
             </div>
               <div style="padding-top:20px;">
               <button class="btn btn-outline-dark" onclick="singOut()">Cerrar Sesión</button>
