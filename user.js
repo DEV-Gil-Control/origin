@@ -24,7 +24,7 @@ var get_user = function(email) {
    console.log(doc.id, " => ", doc.data());
        var menor = document.getElementById("menor");
        menor.innerHTML = `<div>ID: ${doc.id}</div>
-       <div>Email: ${doc.email}</div>`;
+       <div>Email: ${doc.celtutor}</div>`;
         })
     })
    .catch(function(error) {
