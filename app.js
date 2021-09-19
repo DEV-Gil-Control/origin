@@ -164,7 +164,7 @@ function singOut(){
    //  console.log(`Error (${error})`);
 
  // });
-}
+//}
 
 function show(user) {
   var user = user;
