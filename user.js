@@ -197,19 +197,6 @@ function show(user) {
       </div>
     `;
   }else{
-    content.innerHTML = `
-      <div class="container mt-5">
-        <div class="card">
-          <h5 class="card-header">Bienvenido ${user.email}</h5>
-          <div class="card-body">
-            <p class="card-text">Ingresa a tu cuenta de correo registrada y verifica tu cuenta por favor.</p> 
-         
-          
- <button class="btn btn-outline-dark" onclick="singOut()">Haz Click Aquí Si Deseas Cerrar Esta Sesión</button>
-             </div>     
-          </div>
-        </div>
-      </div>
-    `;
+    location.href = 'user.html'
   }
 }
