@@ -197,6 +197,22 @@ function show(user) {
       </div>
     `;
   }else{
-    location.href = 'user.html'
+    content.innerHTML = `
+      <div class="container mt-5">
+        <div class="card">
+          <h5 class="card-header">Bienvenido, gracias participar en el Amparo Colectivo: Vacunas COVID-19 para menores de edad</h5>
+            <div id="bientutor" style="margin-left:22px; margin-top:20px; font-weight: bold;">
+            </div>
+          <div class="card-body">
+            <div id="menor" class="shadow-none p-3 mb-5 bg-light rounded">
+            </div>
+              <div style="padding-top:20px;">
+              <p class="card-text">Ingresa a tu cuenta de correo registrada y verifica tu cuenta por favor.</p>
+              <button class="btn btn-outline-dark" onclick="singOut()">Cerrar Sesión</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    `;
   }
 }
