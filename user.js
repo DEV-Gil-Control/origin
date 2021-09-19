@@ -131,7 +131,7 @@ function observer(){
       var uid = user.uid;
       var providerData = user.providerData;
       // ...
-      console.log(`Usuario activo: ${email}, Estado: ${emailVerified}`)
+      console.log(`Usuario activo: ${email}, Estado: ${true}`)
       get_user(email)
         
     } else {
