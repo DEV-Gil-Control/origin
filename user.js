@@ -16,7 +16,7 @@ var get_user = function(email) {
        <div>Teléfono Celular: ${doc.data().celtutor}</div>`;
        var bientutor = document.getElementById("bientutor");
        bientutor.innerHTML = `<div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
-       <div>Correo Electrónico: ${doc.data().email}</div>`;
+       <div>Correo Electrónico: {doc.data().mailtutor}</div>`;
         })
     })
    .catch(function(error) {
@@ -48,6 +48,7 @@ var push_to_firebase = function(data){
               teltutor: data["teltutor"],
               celtutor: data["celtutor"],
               redtutor: data["redtutor"],
+           mailtutor: data["mailtutor"],
             timestamp: Date.now()
         })
         .then(function(docRef) {
@@ -76,6 +77,7 @@ var push_to_firebase = function(data){
           var teltutor = document.getElementById("teltutor");
           var celtutor = document.getElementById("celtutor");
           var redtutor = document.getElementById("redtutor");
+         var mailtutor = document.getElementById("mailtutor");
 
         var data = {
             "email": email.value,
@@ -94,6 +96,7 @@ var push_to_firebase = function(data){
             "teltutor": teltutor.value,
             "celtutor": celtutor.value,
             "redtutor": redtutor.value
+           "mailtutor": mailtutor.value
         }
         push_to_firebase(data);
           
