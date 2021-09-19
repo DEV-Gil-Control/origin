@@ -114,13 +114,13 @@ function observer(){
       // User is signed in.
       var displayName = user.displayName;
       var email = user.email;
-      var emailVerified = user.emailVerified;
+      //var emailVerified = user.emailVerified;
       var photoURL = user.photoURL;
       var isAnonymous = user.isAnonymous;
       var uid = user.uid;
       var providerData = user.providerData;
       // ...
-      console.log(`Usuario activo: ${email}, Estado: ${emailVerified}`)
+     // console.log(`Usuario activo: ${email}, Estado: ${emailVerified}`)
     } else {
       console.log('Ningun Usuario Activo')
       content.innerHTML = `
@@ -153,17 +153,17 @@ function singOut(){
   });
 }
 
-function verification(){
-  var user = firebase.auth().currentUser;
+//function verification(){
+ // var user = firebase.auth().currentUser;
 
-  user.sendEmailVerification().then(function() {
+  //user.sendEmailVerification().then(function() {
     // Email sent.
-    console.log(`Enviando correo...`);
-  }).catch(function(error) {
+    //console.log(`Enviando correo...`);
+  // }).catch(function(error) {
     // An error happened.
-    console.log(`Error (${error})`);
+   //  console.log(`Error (${error})`);
 
-  });
+ // });
 }
 
 function show(user) {
