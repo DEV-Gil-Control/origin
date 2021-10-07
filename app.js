@@ -93,6 +93,7 @@ function observer(){
     <h5 class="card-title">Dr Ray Manneh</h5>
     <p class="card-text">Oncólogo Clínico</p>
     <p class="card-text">Sociedad de Oncología y Hematolología del César</p>
+    <p class="card-text">Clínica Porto Azul</p>
   </div>
        
         </div>
