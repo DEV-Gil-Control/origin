@@ -79,36 +79,29 @@ function observer(){
     } else {
       console.log('Ningun Usuario Activo')
       content.innerHTML = `
-      <div class="container mt-2">
-        <div class="card">
-          <h5 class="card-header">Bienvenido al Conversatorio:</h5>
-          <div class="card-body">
-            <p>Perfilamiento de pacientes para inhibidores de Tirosina Quinasa</p>
-      </div></div>
-      
-       <div style="padding-bottom:20px;"></div>
-
-
-<div class="card bg-light" >
-  <div class="card-body">
-    <h5 class="card-title">Dr. Ray Manneh</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Oncólogo Clínico</h6>
-    <p class="card-text">Sociedad de Oncología y Hematología del César.</p>
-    <p class="card-text">Clínica Porto Azul.</p>
-  </div>
-</div>
-
-    <div style="padding-bottom:20px;"></div>
-    
-<div class="card bg-light" >
-  <div class="card-body">
-    <h5 class="card-title">Dr. Juan Andrés Rubiano</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Oncólogo Clínico</h6>
-    <p class="card-text">Instituto Nacional de Cancerología.</p>
-  </div>
-</div>
-       
+  <!-- Modal Register -->
+  <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="modalRegisterUser" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRegisterUser">Datos de Acceso</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+        <div class="modal-body">
+          <input  class="form-control form-control-sm mr-sm-2 mb-1" id="email" type="email" placeholder="Ingresa email" >
+          <input  class="form-control form-control-sm mr-sm-2" id="password" type="password" placeholder="Ingresa Contraseña">
+        </div>
+                  <div class="modal-header">
+                  <h5 class="modal-title" id="modalRegisterUser">Aviso de Privacidad</h5>
+                  </div>
+    <form style="padding-left:5px;">
+        <div>
+    <input type="checkbox" id="privacy" name="subscribe" value="newsletter">
+    <label for="subscribeNews">Acepto Aviso de Privacidad</label>
+  </div>
+    </form>
        `;       
       // User is signed out.
       // ...
