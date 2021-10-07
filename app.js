@@ -92,6 +92,7 @@ function observer(){
             <div class="card-body">
             <p>Perfilamiento de pacientes para inhibidores de Tirosina Quinasa</p>
             </div></div></div></div>
+            </div>
        
        
        `;       
