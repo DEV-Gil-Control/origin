@@ -90,7 +90,7 @@ function observer(){
 <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
   <div class="card-header">Dr Ray Manneh</div>
   <div class="card-body">
-    <h5 class="card-title">Oncólogo Clínico</h5>
+    <p class="card-text">Oncólogo Clínico</p>
     <p class="card-text">Sociedad de Oncología y Hematolología del César</p>
     <p class="card-text">Clínica Porto Azul</p>
   </div>
