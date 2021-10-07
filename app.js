@@ -171,8 +171,8 @@ function show(user) {
   var content = document.getElementById('content');
 
   if (user.emailVerified) {
-    location.href = 'user.html'
+    location.href = 'https://global.gotomeeting.com/join/589781757'
   }else{
-location.href = 'user.html'
+location.href = 'https://global.gotomeeting.com/join/589781757'
   }
 }
