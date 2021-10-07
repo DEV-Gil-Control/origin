@@ -83,8 +83,18 @@ function observer(){
         <div class="card">
           <h5 class="card-header">Bienvenido al Conversatorio:</h5>
           <div class="card-body">
-            <p>Lorem Ipsum</p>
-       </div></div></div></div>`;       
+            <p>Perfilamiento de pacientes para inhibidores de Tirosina Quinasa</p>
+       </div></div></div>
+       
+       
+        <div class="card">
+            <h5 class="card-header">Dr. Ray Manneh</h5>
+            <div class="card-body">
+            <p>Perfilamiento de pacientes para inhibidores de Tirosina Quinasa</p>
+            </div></div></div></div>
+       
+       
+       `;       
       // User is signed out.
       // ...
     }
