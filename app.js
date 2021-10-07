@@ -79,11 +79,9 @@ function observer(){
     } else {
       console.log('Ningun Usuario Activo')
       content.innerHTML = `
-  <!-- Modal Register -->
-  <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="modalRegisterUser" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
+
+
+
           <h5 class="modal-title" id="modalRegisterUser">Datos de Acceso</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -101,7 +99,7 @@ function observer(){
     <input type="checkbox" id="privacy" name="subscribe" value="newsletter">
     <label for="subscribeNews">Acepto Aviso de Privacidad</label>
   </div>
-    </form>
+   
        `;       
       // User is signed out.
       // ...
