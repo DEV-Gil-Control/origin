@@ -89,7 +89,7 @@ function observer(){
        <div style="padding-bottom:20px;"></div>
 
 
-<div class="card" >
+<div class="card bg-light" >
   <div class="card-body">
     <h5 class="card-title">Dr. Ray Manneh</h5>
     <h6 class="card-subtitle mb-2 text-muted">Oncólogo Clínico</h6>
@@ -98,8 +98,9 @@ function observer(){
   </div>
 </div>
 
-
-<div class="card" >
+    <div style="padding-bottom:20px;"></div>
+    
+<div class="card bg-light" >
   <div class="card-body">
     <h5 class="card-title">Dr. Juan Andrés Rubiano</h5>
     <h6 class="card-subtitle mb-2 text-muted">Oncólogo Clínico</h6>
