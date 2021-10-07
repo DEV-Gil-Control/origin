@@ -121,16 +121,18 @@ function observer(){
       var providerData = user.providerData;
       // ...
       console.log(`Usuario activo: ${email}, Estado: ${emailVerified}`)
-    } else {
+     } else {
       console.log('Ningun Usuario Activo')
       content.innerHTML = `
       <div class="container mt-5">
         <div class="card">
-          <h5 class="card-header">Bienvenido al conversatorio:</h5>
+          <h5 class="card-header">Bienvenido al sistema INTERNO para registro de tutores y menores:</h5>
           <div class="card-body">
-            <p>Cáncer Renal Metastásico:<p>
-            <p>Perfilamiento de Pacientes para Inhibidores de Tirosina Quinasa</p>
-       </div></div></div></div>`;       
+            <p>1. Entra con tu correo y contrasseña registrados.</p>
+            <p>2. Si no estás registrado haz clic en el botón "REGISTRARME".</p>
+            <p>3. Sigue instrucciones.</p>
+            <p>4. Recuerda que debes confir tu correo electrónico, entrando a tu cuenta de correo y haciendo clic en el enlace para verificar.</p>
+       </div></div></div></div>`;        
       // User is signed out.
       // ...
     }
