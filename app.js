@@ -97,6 +97,15 @@ function observer(){
     <p class="card-text">Clínica Porto Azul.</p>
   </div>
 </div>
+
+
+<div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">Dr. Juan Andrés Rubiano</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Oncólogo Clínico</h6>
+    <p class="card-text">Instituto Nacional de Cancerología.</p>
+  </div>
+</div>
        
         </div>
        `;       
