@@ -128,7 +128,7 @@ function observer(){
         <div class="card">
           <h5 class="card-header">Bienvenido al conversatorio:</h5>
           <div class="card-body">
-            <h3>Cáncer Renal Metastásico:</h3>
+            <p>Cáncer Renal Metastásico:<p>
             <p>Perfilamiento de Pacientes para Inhibidores de Tirosina Quinasa</p>
        </div></div></div></div>`;       
       // User is signed out.
