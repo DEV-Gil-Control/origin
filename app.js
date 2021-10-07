@@ -1,4 +1,4 @@
-safunction register(){
+function register(){
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     console.log( email , password);
@@ -14,29 +14,14 @@ safunction register(){
 }
 
     
-        //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){
         alert("Registro creado exitosamente, continúa para descargar el documento")
         var db = firebase.firestore();
 
-        db.collection("messages").add({
+        db.collection("users").add({
             email: data["email"],
-            namemenor: data["namemenor"],
-            edadmenor: data["edadmenor"],
-            apaternomenor: data["apaternomenor"],
-            amaternomenor: data["amaternomenor"],
-            curpmenor: data["curpmenor"],
-              nametutor: data["nametutor"],
-              apaternotutor: data["apaternotutor"],
-              amaternotutor: data["amaternotutor"],
-              domiciliotutor: data["domiciliotutor"],
-              coloniatutor: data["coloniatutor"],
-              cptutor: data["cptutor"],
-              mpiotutor: data["mpiotutor"],
-              teltutor: data["teltutor"],
-              celtutor: data["celtutor"],
-              redtutor: data["redtutor"],
             timestamp: Date.now()
         })
         .then(function(docRef) {
@@ -50,46 +35,16 @@ var push_to_firebase = function(data){
 
       var contact_submit = function(){
            var email = document.getElementById("email");
-        var namemenor = document.getElementById("namemenor");
-          var edadmenor = document.getElementById("edadmenor");
-        var apaternomenor = document.getElementById("apaternomenor");
-        var amaternomenor = document.getElementById("amaternomenor");
-        var curpmenor = document.getElementById("curpmenor");  
-          var nametutor = document.getElementById("nametutor");
-          var apaternotutor = document.getElementById("apaternotutor");
-          var amaternotutor = document.getElementById("amaternotutor");
-          var domiciliotutor = document.getElementById("domiciliotutor");
-          var coloniatutor = document.getElementById("coloniatutor");
-          var cptutor = document.getElementById("cptutor");
-          var mpiotutor = document.getElementById("mpiotutor");
-          var teltutor = document.getElementById("teltutor");
-          var celtutor = document.getElementById("celtutor");
-          var redtutor = document.getElementById("redtutor");
 
         var data = {
-            "email": email.value,
-          "namemenor": namemenor.value,
-            "edadmenor": edadmenor.value,
-          "apaternomenor": apaternomenor.value,
-          "amaternomenor": amaternomenor.value,
-          "curpmenor": curpmenor.value,
-            "nametutor": nametutor.value,
-            "apaternotutor": apaternotutor.value,
-            "amaternotutor": amaternotutor.value,
-            "domiciliotutor": domiciliotutor.value,
-            "coloniatutor": coloniatutor.value,
-            "cptutor": cptutor.value,
-            "mpiotutor": mpiotutor.value,
-            "teltutor": teltutor.value,
-            "celtutor": celtutor.value,
-            "redtutor": redtutor.value
+            "email": email.value
         }
         push_to_firebase(data);
           
 
       }
       
-   // document.getElementById("submit_msg").addEventListener("click", contact_submit);
+  //  document.getElementById("submit_msg").addEventListener("click", contact_submit);
 
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
@@ -121,18 +76,15 @@ function observer(){
       var providerData = user.providerData;
       // ...
       console.log(`Usuario activo: ${email}, Estado: ${emailVerified}`)
-     } else {
+    } else {
       console.log('Ningun Usuario Activo')
       content.innerHTML = `
       <div class="container mt-5">
         <div class="card">
-          <h5 class="card-header">Bienvenido al sistema INTERNO para registro de tutores y menores:</h5>
+          <h5 class="card-header">Bienvenido al Conversatorio:</h5>
           <div class="card-body">
-            <p>1. Entra con tu correo y contrasseña registrados.</p>
-            <p>2. Si no estás registrado haz clic en el botón "REGISTRARME".</p>
-            <p>3. Sigue instrucciones.</p>
-            <p>4. Recuerda que debes confir tu correo electrónico, entrando a tu cuenta de correo y haciendo clic en el enlace para verificar.</p>
-       </div></div></div></div>`;        
+            <p>Lorem Ipsum</p>
+       </div></div></div></div>`;       
       // User is signed out.
       // ...
     }
