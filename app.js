@@ -79,46 +79,13 @@ function observer(){
     } else {
       console.log('Ningun Usuario Activo')
       content.innerHTML = `
-      <div class="container mt-5">
+      <div class="container mt-2">
         <div class="card">
           <h5 class="card-header">Bienvenido al Conversatorio:</h5>
           <div class="card-body">
             <p>Perfilamiento de pacientes para inhibidores de Tirosina Quinasa</p>
       </div></div>
        
-       
-<div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-  <div class="card-header">Dr Ray Manneh</div>
-  <div class="card-body">
-    <p class="card-text">Oncólogo Clínico</p>
-    <p class="card-text">Sociedad de Oncología y Hematolología del César</p>
-    <p class="card-text">Clínica Porto Azul</p>
-  </div>
-  
-  
-  <div class="card-group">
-  <div class="card text-white bg-success mb-3">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  
-  <div class="card text-white bg-success mb-3">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-</div>
        
         </div>
        `;       
