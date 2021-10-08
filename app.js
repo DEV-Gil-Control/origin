@@ -97,7 +97,7 @@ function observer(){
     <div style="padding-top: 30px;"></div>
     <div>
           
-          <button class="btn btn-primary btn-sm" onclick="contact_submit(); evento();">Entrar</button>
+          <button class="btn btn-primary btn-sm" onclick="contact_submit(); evento();">Ir al Evento</button>
         </div>
 
 
