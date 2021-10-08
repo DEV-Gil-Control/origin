@@ -6,9 +6,10 @@ var push_to_firebase = function(data){
         var db = firebase.firestore();
 
         db.collection("messages").add({
-            nombreg: data["nombreg"],
+  
             mailreg: data["mailreg"],
             empresa: data["empresa"],
+            nombreg: data["nombreg"],
             timestamp: Date.now()
         })
         .then(function(docRef) {
@@ -21,15 +22,17 @@ var push_to_firebase = function(data){
       }
 
       var contact_submit = function(){
-        var nombreg = document.getElementById("nombreg");
+        
         var mailreg = document.getElementById("mailreg");
         var empresa = document.getElementById("empresa");
+              var nombreg = document.getElementById("nombreg");
       
 
         var data = {
-          "nombreg": nombreg.value,
+          
           "mailreg": mailreg.value,
-          "empresa": empresa.value
+          "empresa": empresa.value,
+                "nombreg": nombreg.value
         }
         push_to_firebase(data);
           
