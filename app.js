@@ -81,7 +81,7 @@ function observer(){
         
       
      <div>
-                 <h5>Datos</h5>
+                 <h5>Registre sus datos para acceder al evento</h5>
                  </div>
       
      
