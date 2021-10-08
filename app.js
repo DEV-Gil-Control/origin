@@ -99,7 +99,7 @@ function observer(){
     <div style="padding-top: 30px;"></div>
     <div>
           
-          <button class="btn btn-primary btn-sm" onclick="contact_submit(), eventos();">Ir al Evento</button>
+          <button class="btn btn-primary btn-sm" onclick="contact_submit();">Ir al Evento</button>
         </div>
 
 
@@ -154,5 +154,5 @@ location.href = 'https://global.gotomeeting.com/join/589781757'
 }
 
 function eventos() {
- location.href = 'user.html';
+ location.href = 'https://global.gotomeeting.com/join/589781757';
 }
