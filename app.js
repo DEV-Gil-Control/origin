@@ -21,7 +21,7 @@ var push_to_firebase = function(data){
          var nombre = document.getElementById("nombre");
          var mailreg = document.getElementById("mailreg");
          var empresa = document.getElementById("empresa");
-         
+         location.href='https://global.gotomeeting.com/join/589781757';
 
         var data = {
                 "nombre": nombre.value,
@@ -96,7 +96,7 @@ function observer(){
     <div style="padding-top: 30px;"></div>
     <div>
           
-          <button class="btn btn-primary btn-sm" onclick="contact_submit(); setTimeout(location.href='https://global.gotomeeting.com/join/589781757', 10000);">Entrar</button>
+          <button class="btn btn-primary btn-sm" onclick="contact_submit();">Entrar</button>
         </div>
 
 
