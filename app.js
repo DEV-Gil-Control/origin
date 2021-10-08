@@ -1,5 +1,5 @@
 var push_to_firebase = function(data){
-        alert("Sus datos fueron registrados exitosamente)
+        alert("Sus datos fueron registrados exitosamente")
         var db = firebase.firestore();
 
         db.collection("messages").add({
