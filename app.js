@@ -73,26 +73,35 @@ function observer(){
 <div style="padding-top: 30px;"> </div>
 <div class="card" style="width: 30rem; margin: auto; width: 50%; padding: 10px;">
   <div class="card-body">
-<form>
-  <div class="form-group">
- 
-  
-    <label for="mailreg">Correo Electrónico</label>
-    <input type="text" id="mailreg" name="mailreg" placeholder="Escriba su Correo electrónico"> 
+
+
+<div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="modalRegisterUser" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        
+      
+     <div class="modal-header">
+                 <h5 class="modal-title" id="modalRegisterUser">Datos</h5>
+                 </div>
+      
+     
+      <label for="mailreg"></label>
+      <input type="text" id="mailreg" name="mailreg" placeholder="Escriba Su Correo Electrónico" style="width: 95.5%;">
+      
+      <label for="empresa"></label>
+      <input type="text" id="empresa" name="empresa" placeholder="Escriba la empresa en la que labora" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
+      
+     
+        </div>  
+    </form>
     
-    <small id="emailHelp" class="form-text text-muted">Sus datos no serán compartidos con nadie.</small>
-  </div>
-  
-  <div class="form-group">
-        <label for="empresa">Empresa en la que labora</label>
-    <input type="text" id="empresa" name="empresa" placeholder="Escriba su Correo electrónico"> 
-  </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Acepto el Aviso de Privacidad</label>
-  </div>
-  <div style="padding-top: 10px;"> </div>
-  <button type="submit" class="btn btn-success" onclick="contact_submit();">Entrar</button>
+    <div class="modal-footer">
+          
+          <button class="btn btn-primary btn-sm" onclick="contact_submit();">Guardar</button>
+        </div>
+
+
+
 </form>
   </div>
 </div>
