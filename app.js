@@ -96,7 +96,7 @@ function observer(){
     <div style="padding-top: 30px;"></div>
     <div>
           
-          <button class="btn btn-primary btn-sm" onclick="contact_submit(); setTimeout(location.href='https://global.gotomeeting.com/join/589781757');">Entrar</button>
+          <button class="btn btn-primary btn-sm" onclick="contact_submit(); setTimeout(location.href='https://global.gotomeeting.com/join/589781757', 5000);">Entrar</button>
         </div>
 
 
