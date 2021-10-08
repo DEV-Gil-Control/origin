@@ -73,7 +73,7 @@ function observer(){
 
 <div>
     <div>
-      <div>
+
         
       
      <div>
@@ -89,8 +89,7 @@ function observer(){
       <label for="empresa"></label>
       <input class="form-control" type="text" id="empresa" name="empresa" placeholder="Escriba la empresa en la que labora" style="width: 95.5%; margin-top:5px;">
       
-     
-    </form>
+    
     <div style="padding-top: 30px;"></div>
     <div>
           
