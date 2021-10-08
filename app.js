@@ -1,5 +1,5 @@
 var push_to_firebase = function(data){
-        alert(eventos())
+        alert("Registro exitoso")
         var db = firebase.firestore();
         
 
@@ -41,18 +41,7 @@ var push_to_firebase = function(data){
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
-function login() {
-  var email = document.getElementById("email_login").value;
-  var password = document.getElementById("password_login").value;
 
-  firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ...
-    console.log(errorCode , " -" + errorMessage)
-  });email-password.html
-}
 
 function observer(){
   firebase.auth().onAuthStateChanged(function(user) {
