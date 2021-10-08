@@ -154,5 +154,5 @@ location.href = 'https://global.gotomeeting.com/join/589781757'
 }
 
 function eventos() {
- location.href = 'https://global.gotomeeting.com/join/589781757';
+ location.href = 'user.html';
 }
