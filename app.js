@@ -151,8 +151,3 @@ location.href = 'https://global.gotomeeting.com/join/589781757'
   }
 }
 
-var delayInMilliseconds = 5000; //5 second
-
-setTimeout(function() {
-  //your code to be executed after 5 second
-}, delayInMilliseconds);
