@@ -61,9 +61,9 @@ function validate() {
   });
 
   if (inputsWithValues == myInputs.length) {
-    $("input[type=submit]").prop("disabled", false);
+    $("button[type=submit]").prop("disabled", false);
   } else {
-    $("input[type=submit]").prop("disabled", true);
+    $("button[type=submit]").prop("disabled", true);
   }
 }  
       
