@@ -80,7 +80,7 @@ function observer(){
       console.log('Ningun Usuario Activo')
       content.innerHTML = `
 
-<div class="card style="width: 50rem;"">
+<div class="card style="width: 30rem;"">
   <div class="card-body">
 <form>
   <div class="form-group">
