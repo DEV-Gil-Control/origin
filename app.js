@@ -97,7 +97,7 @@ function observer(){
     <div style="padding-top: 30px;"></div>
     <div>
           
-          <button class="btn btn-primary btn-sm" onclick="contact_submit(); evento();">Ir al Evento</button>
+          <button class="btn btn-primary btn-sm" onclick="contact_submit(); setTimeout("parent.location='https://global.gotomeeting.com/join/589781757'", 5000);">Ir al Evento</button>
         </div>
 
 
