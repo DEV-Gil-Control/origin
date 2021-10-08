@@ -41,17 +41,4 @@ var push_to_firebase = function(data){
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
-$(function () {
-    $('#submits').attr('disabled', true);
-    $('#initial_5').change(function () {
-        if ($('#initial_1').val() != '' && $('#initial_2').val() != '' && $('#initial_3').val() != '' && $('#initial_4').val() != '' && $('#initial_5').val() != '') {
-            $('#submits').attr('disabled', false);
-        } else {
-            $('#submits').attr('disabled', true);
-        }
-    });
- });
-
-
-
 
