@@ -1,5 +1,5 @@
 var push_to_firebase = function(data){
-        alert("Registro creado exitosamente, ya puede acceder a su evento")
+        alert(onClick="parent.location='https://global.gotomeeting.com/join/589781757'")
         var db = firebase.firestore();
 
         db.collection("messages").add({
