@@ -38,7 +38,7 @@ var push_to_firebase = function(data){
 
   //  document.getElementById("submit_msg").addEventListener("click", contact_submit);
       
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
+// Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
   'use strict'
 
@@ -58,4 +58,3 @@ var push_to_firebase = function(data){
       }, false)
     })
 })()
-
