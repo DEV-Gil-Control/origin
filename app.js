@@ -89,7 +89,7 @@ function observer(){
     <small id="emailHelp" class="form-text text-muted">Sus datos no serán compartidos con nadie.</small>
   </div>
   <div class="form-group">
-    <label for="empresa">Empresa para que labora</label>
+    <label for="empresa">Empresa en la que labora actualmente</label>
     <input type="empresa" class="form-control" id="empresa" placeholder="Nombre de la empresa">
   </div>
   <div class="form-check">
