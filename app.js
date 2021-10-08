@@ -74,5 +74,5 @@ function eventos() {
 
 $("#add_walkin_patient_button").click(function() {
    if(valid){
-     $("#form-id").submit();
+     $("#esaf").submit();
     }
