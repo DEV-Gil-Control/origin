@@ -13,7 +13,7 @@ function register(){
     });
 }
 
-    
+   
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){
