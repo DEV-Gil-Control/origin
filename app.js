@@ -72,7 +72,3 @@ function eventos() {
     })
 })()
 
-$("#add_walkin_patient_button").click(function() {
-   if(valid){
-     $("#esaf").submit();
-    }
