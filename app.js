@@ -28,9 +28,7 @@ var push_to_firebase = function(data){
            "mailreg": mailreg.value,
            "empresa": empresa.value
         }
-        push_to_firebase(data);
-        setTimeout(location.href = 'https://global.gotomeeting.com/join/589781757', 15000);      
-          
+        push_to_firebase(data);          
 
       }
       
