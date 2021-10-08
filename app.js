@@ -1,6 +1,5 @@
 var push_to_firebase = function(data){
         alert("Sus datos fueron registrados exitosamente")
-        location.href = 'https://global.gotomeeting.com/join/589781757'
         var db = firebase.firestore();
 
         db.collection("messages").add({
