@@ -18,7 +18,7 @@ var push_to_firebase = function(data){
         });
       }
 
-      var contact_submit = function(){
+      var submit = function(){
          var nombre = document.getElementById("nombre");
          var mailreg = document.getElementById("mailreg");
          var empresa = document.getElementById("empresa");
