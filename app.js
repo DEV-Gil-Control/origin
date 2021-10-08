@@ -42,30 +42,6 @@ var push_to_firebase = function(data){
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
 
-    $(document).ready(function() {
-  validate();
-  $('input').on('keyup', validate);
-});
-
-function validate() {
-  var inputsWithValues = 0;
   
-  // get all input fields except for type='submit'
-  var myInputs = $("input:not([type='submit'])");
-
-  myInputs.each(function(e) {
-    // if it has a value, increment the counter
-    if ($(this).val()) {
-      inputsWithValues += 1;
-    }
-  });
-
-  if (inputsWithValues == myInputs.length) {
-    $("button[type=submit]").prop("disabled", false);
-  } else {
-    $("button[type=submit]").prop("disabled", true);
-  }
-}  
-      
       
       
