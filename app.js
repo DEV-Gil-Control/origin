@@ -49,6 +49,11 @@ function eventos() {
  location.href = 'https://global.gotomeeting.com/join/589781757';
 }
 
+$("#add_walkin_patient_button").click(function() {
+   if(valid){
+     $("#form-id").submit();
+    }
+
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
   'use strict'
