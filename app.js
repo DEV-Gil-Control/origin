@@ -1,7 +1,7 @@
 var push_to_firebase = function(data){
         alert("Sus datos fueron registrados exitosamente")
         var db = firebase.firestore();
-        location.href = 'https://global.gotomeeting.com/join/589781757';
+        
 
         db.collection("messages").add({
                 nombre: data["nombre"],
@@ -29,7 +29,8 @@ var push_to_firebase = function(data){
            "mailreg": mailreg.value,
            "empresa": empresa.value
         }
-        push_to_firebase(data);          
+        push_to_firebase(data);   
+              location.href = 'https://global.gotomeeting.com/join/589781757';
 
       }
       
