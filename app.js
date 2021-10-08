@@ -33,9 +33,6 @@ var push_to_firebase = function(data){
 
       }
       
-      function evento() {
-         location.href='https://global.gotomeeting.com/join/589781757';
-}
 
   //  document.getElementById("submit_msg").addEventListener("click", contact_submit);
 
