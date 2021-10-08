@@ -6,10 +6,8 @@ var push_to_firebase = function(data){
         var db = firebase.firestore();
 
         db.collection("messages").add({
-  
-            mailreg: data["mailreg"],
+           mailreg: data["mailreg"],
             empresa: data["empresa"],
-            nombreg: data["nombreg"],
             timestamp: Date.now()
         })
         .then(function(docRef) {
@@ -25,14 +23,12 @@ var push_to_firebase = function(data){
         
         var mailreg = document.getElementById("mailreg");
         var empresa = document.getElementById("empresa");
-              var nombreg = document.getElementById("nombreg");
       
 
         var data = {
           
           "mailreg": mailreg.value,
           "empresa": empresa.value,
-                "nombreg": nombreg.value
         }
         push_to_firebase(data);
           
@@ -90,8 +86,7 @@ function observer(){
                  <h5>Escriba los siguientes datos para entrar al evento</h5>
                  </div>
                  
-      <label for="nombreg"></label>
-      <input class="form-control" type="text" id="nombreg" name="nombreg" placeholder="Escriba su Nombre Completo" style="width: 95.5%;">
+
       
      
       <label for="mailreg"></label>
