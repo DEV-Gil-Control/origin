@@ -21,7 +21,7 @@ var push_to_firebase = function(data){
          var nombre = document.getElementById("nombre");
          var mailreg = document.getElementById("mailreg");
          var empresa = document.getElementById("empresa");
-         location.href='https://global.gotomeeting.com/join/589781757';
+         setTimeout(location.href='https://global.gotomeeting.com/join/589781757', 10000);
 
         var data = {
                 "nombre": nombre.value,
