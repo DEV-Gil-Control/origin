@@ -2,7 +2,7 @@
 //- - - - - - - - -  push data - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){
-        alert("Registro creado exitosamente, continúa para descargar el documento")
+        alert("Registro creado exitosamente, será redirigido al evento")
         var db = firebase.firestore();
 
         db.collection("messages").add({
@@ -21,12 +21,12 @@ var push_to_firebase = function(data){
 
       var contact_submit = function(){
            var email = document.getElementById("email");
-        var namemenor = document.getElementById("empresa");
+        var empresa = document.getElementById("empresa");
       
 
         var data = {
             "email": email.value,
-          "namemenor": empresa.value
+          "empresa": empresa.value
         }
         push_to_firebase(data);
           
