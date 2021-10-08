@@ -1,27 +1,13 @@
-function register(){
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-    console.log( email , password);
-    firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
-      verification()
-    }).catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // ...
-      console.log(errorCode , " -" + errorMessage)
-    });
-}
 
-   
-//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+//- - - - - - - - -  push data - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){
         alert("Registro creado exitosamente, continúa para descargar el documento")
         var db = firebase.firestore();
 
-        db.collection("users").add({
+        db.collection("messages").add({
             email: data["email"],
+            empresa: data["empresa"],
             timestamp: Date.now()
         })
         .then(function(docRef) {
@@ -35,15 +21,20 @@ var push_to_firebase = function(data){
 
       var contact_submit = function(){
            var email = document.getElementById("email");
+        var namemenor = document.getElementById("empresa");
+      
 
         var data = {
-            "email": email.value
+            "email": email.value,
+          "namemenor": empresa.value
         }
         push_to_firebase(data);
           
 
       }
       
+    //  document.getElementById("submit_msg").addEventListener("click", contact_submit);
+
   //  document.getElementById("submit_msg").addEventListener("click", contact_submit);
 
 
