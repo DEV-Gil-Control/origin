@@ -18,7 +18,7 @@ var push_to_firebase = function(data){
         });
       }
 
-      var submit = function(){
+      var contact_submit = function(){
          var nombre = document.getElementById("nombre");
          var mailreg = document.getElementById("mailreg");
          var empresa = document.getElementById("empresa");
@@ -59,7 +59,7 @@ function eventos() {
   // Loop over them and prevent submission
   Array.prototype.slice.call(forms)
     .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
+      form.addEventListener('contact_submit', function (event) {
         if (!form.checkValidity()) {
           event.preventDefault()
           event.stopPropagation()
