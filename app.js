@@ -1,6 +1,5 @@
 var push_to_firebase = function(data){
-        alert("Ya puede entrar a su evento");
-);
+        alert("Registro creado exitosamente, ya puede acceder a su evento")
         var db = firebase.firestore();
 
         db.collection("messages").add({
