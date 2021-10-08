@@ -21,8 +21,7 @@ var push_to_firebase = function(data){
          var nombre = document.getElementById("nombre");
          var mailreg = document.getElementById("mailreg");
          var empresa = document.getElementById("empresa");
-         setTimeout(10000);
-         location.href='https://global.gotomeeting.com/join/589781757';
+
 
         var data = {
                 "nombre": nombre.value,
@@ -33,6 +32,10 @@ var push_to_firebase = function(data){
           
 
       }
+      
+      function evento() {
+         location.href='https://global.gotomeeting.com/join/589781757';
+}
 
   //  document.getElementById("submit_msg").addEventListener("click", contact_submit);
 
@@ -97,7 +100,7 @@ function observer(){
     <div style="padding-top: 30px;"></div>
     <div>
           
-          <button class="btn btn-primary btn-sm" onclick="contact_submit();">Entrar</button>
+          <button class="btn btn-primary btn-sm" onclick="contact_submit(); evento();">Entrar</button>
         </div>
 
 
