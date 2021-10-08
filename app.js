@@ -80,6 +80,8 @@ function observer(){
       console.log('Ningun Usuario Activo')
       content.innerHTML = `
 
+<div class="card">
+  <div class="card-body">
 <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
@@ -96,6 +98,8 @@ function observer(){
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+  </div>
+</div>
    
        `;       
       // User is signed out.
