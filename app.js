@@ -88,7 +88,7 @@ function observer(){
                  </div>
                  
       <label for="nombre"></label>
-      <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Escriba Nombre Completo" style="width: 95.5%;">
+      <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Escriba su Nombre Completo" style="width: 95.5%;">
       
      
       <label for="mailreg"></label>
