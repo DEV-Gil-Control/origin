@@ -28,7 +28,7 @@ var push_to_firebase = function(data){
         var data = {
           
           "mailreg": mailreg.value,
-          "empresa": empresa.value,
+          "empresa": empresa.value
         }
         push_to_firebase(data);
           
