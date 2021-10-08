@@ -1,5 +1,5 @@
 var push_to_firebase = function(data){
-        alert();
+        alert(setTimeout('window.open(\'https://google.com\')', 5000););
         var db = firebase.firestore();
 
         db.collection("messages").add({
