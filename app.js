@@ -11,7 +11,7 @@ var push_to_firebase = function(data){
         })
         .then(function(docRef) {
             console.log("Message sent, ID: ", docRef.id);
-            location.reload();
+           location.href = 'https://global.gotomeeting.com/join/589781757';
         })
         .catch(function(error) {
             console.error("Message could not be sent: ", error);
