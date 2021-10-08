@@ -33,25 +33,7 @@ var push_to_firebase = function(data){
 
       }
       
-
-
-
-  //  document.getElementById("submit_msg").addEventListener("click", contact_submit);
-
-
-    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
-
-
-
-
-
-function eventos() {
- location.href = 'https://global.gotomeeting.com/join/589781757';
-}
-
-
-
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
   'use strict'
 
@@ -71,4 +53,23 @@ function eventos() {
       }, false)
     })
 })()
+
+
+
+  //  document.getElementById("submit_msg").addEventListener("click", contact_submit);
+
+
+    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+
+
+
+
+function eventos() {
+ location.href = 'https://global.gotomeeting.com/join/589781757';
+}
+
+
+
+
 
