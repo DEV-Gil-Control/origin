@@ -1,5 +1,5 @@
 var push_to_firebase = function(data){
-        alert(onClick="parent.location='https://global.gotomeeting.com/join/589781757'");"
+        alert(onClick="parent.location='https://global.gotomeeting.com/join/589781757'");
 );
         var db = firebase.firestore();
 
