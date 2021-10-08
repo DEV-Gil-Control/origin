@@ -38,22 +38,3 @@ var push_to_firebase = function(data){
 
   //  document.getElementById("submit_msg").addEventListener("click", contact_submit);
 
-$(document).ready(function() {
-  $("#basic-form").validate({
-    rules: {
-      nombre : {
-        required: true,
-        minlength: 3
-      },
-      mailreg: {
-        required: true,
-        email: true
-      },
-          empresa : {
-        required: true,
-        minlength: 3
-      }, 
-            
-    }
-  });
-});
