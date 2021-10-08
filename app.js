@@ -1,8 +1,5 @@
-
-//- - - - - - - - -  push data - - - - - - - - - - - -//
-
 var push_to_firebase = function(data){
-        alert("Registro creado exitosamente, será redirigido al evento")
+        alert("Registro creado exitosamente, continúa para descargar el documento")
         var db = firebase.firestore();
 
         db.collection("messages").add({
@@ -20,22 +17,19 @@ var push_to_firebase = function(data){
       }
 
       var contact_submit = function(){
-        
-        var mailreg = document.getElementById("mailreg");
-        var empresa = document.getElementById("empresa");
-      
+         
+         var mailreg = document.getElementById("mailreg");
+         var empresa = document.getElementById("empresa");
+         
 
         var data = {
-          
-          "mailreg": mailreg.value,
-          "empresa": empresa.value
+           "mailreg": mailreg.value,
+           "empresa": empresa.value
         }
         push_to_firebase(data);
           
 
       }
-      
-    //  document.getElementById("submit_msg").addEventListener("click", contact_submit);
 
   //  document.getElementById("submit_msg").addEventListener("click", contact_submit);
 
