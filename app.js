@@ -24,12 +24,13 @@ var push_to_firebase = function(data){
 
 
         var data = {
-                "nombre": nombre.value,
+           "nombre": nombre.value,
            "mailreg": mailreg.value,
            "empresa": empresa.value
         }
         push_to_firebase(data);
-        location.href = 'https://global.gotomeeting.com/join/589781757';  
+        setTimeout(location.href = 'https://global.gotomeeting.com/join/589781757', 5000);      
+          
 
       }
       
