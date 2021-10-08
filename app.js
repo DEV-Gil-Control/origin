@@ -3,6 +3,7 @@ var push_to_firebase = function(data){
         var db = firebase.firestore();
 
         db.collection("messages").add({
+                nombre: data["nombre"],
            mailreg: data["mailreg"],
             empresa: data["empresa"],
             timestamp: Date.now()
@@ -17,12 +18,13 @@ var push_to_firebase = function(data){
       }
 
       var contact_submit = function(){
-         
+         var nombre = document.getElementById("nombre");
          var mailreg = document.getElementById("mailreg");
          var empresa = document.getElementById("empresa");
          
 
         var data = {
+                "nombre": nombre.value,
            "mailreg": mailreg.value,
            "empresa": empresa.value
         }
@@ -81,7 +83,8 @@ function observer(){
                  </div>
                  
 
-      
+      <label for="nombre"></label>
+      <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Escriba Su Nombre Completo" style="width: 95.5%;">
      
       <label for="mailreg"></label>
       <input class="form-control" type="text" id="mailreg" name="mailreg" placeholder="Escriba Su Correo Electrónico" style="width: 95.5%;">
