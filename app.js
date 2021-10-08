@@ -81,7 +81,7 @@ function observer(){
         
       
      <div>
-                 <h5>Registre sus datos para acceder al evento</h5>
+                 <h5>Escriba los siguientes datos para entrar al evento</h5>
                  </div>
       
      
@@ -94,10 +94,10 @@ function observer(){
      
         </div>  
     </form>
-    
+    <div style="padding-top: 10px;"></div>
     <div>
           
-          <button class="btn btn-primary btn-sm" onclick="contact_submit();">Guardar</button>
+          <button class="btn btn-primary btn-sm" onclick="contact_submit();">Entrar</button>
         </div>
 
 
