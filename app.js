@@ -75,13 +75,13 @@ function observer(){
   <div class="card-body">
 
 
-<div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="modalRegisterUser" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
+<div>
+    <div>
+      <div>
         
       
-     <div class="modal-header">
-                 <h5 class="modal-title" id="modalRegisterUser">Datos</h5>
+     <div>
+                 <h5>Datos</h5>
                  </div>
       
      
@@ -95,7 +95,7 @@ function observer(){
         </div>  
     </form>
     
-    <div class="modal-footer">
+    <div>
           
           <button class="btn btn-primary btn-sm" onclick="contact_submit();">Guardar</button>
         </div>
