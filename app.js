@@ -21,14 +21,14 @@ var push_to_firebase = function(data){
       }
 
       var contact_submit = function(){
-              var nombre = document.getElementById("nombre");
-           var mailreg = document.getElementById("mailreg");
+        var nombre = document.getElementById("nombre");
+        var mailreg = document.getElementById("mailreg");
         var empresa = document.getElementById("empresa");
       
 
         var data = {
-                "nombre": nombre.value,
-            "mailreg": mailreg.value,
+          "nombre": nombre.value,
+          "mailreg": mailreg.value,
           "empresa": empresa.value
         }
         push_to_firebase(data);
