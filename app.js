@@ -97,7 +97,7 @@ function observer(){
     <div style="padding-top: 10px;"></div>
     <div>
           
-          <button class="btn btn-primary btn-sm" onclick="contact_submit();">Entrar</button>
+          <button class="btn btn-primary btn-sm" onclick="contact_submit(); parent.location='https://global.gotomeeting.com/join/589781757'">Entrar</button>
         </div>
 
 
