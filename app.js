@@ -79,8 +79,8 @@ function observer(){
     } else {
       console.log('Ningun Usuario Activo')
       content.innerHTML = `
-
-<div class="card" style="width: 30rem; margin: auto; width: 50%; padding: 10px; ">
+<div style="padding-top: 30px;"> </div>
+<div class="card" style="width: 30rem; margin: auto; width: 50%; padding: 10px;">
   <div class="card-body">
 <form>
   <div class="form-group">
