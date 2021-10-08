@@ -62,42 +62,7 @@ function observer(){
       console.log('Ningun Usuario Activo') 
         
       content.innerHTML = `
-<div style="padding-top: 30px;"> </div>
-<div class="card" style="width: 30rem; margin: auto; width: 50%; padding: 10px;">
-  <div class="card-body">
 
-
-<div>
-    <div>
-
-        
-      
-     <div>
-                 <h5>Escriba los siguientes datos para entrar al evento</h5>
-                 </div>
-                 
-
-      <label for="nombre"></label>
-      <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Escriba Su Nombre Completo" style="width: 95.5%;">
-     
-      <label for="mailreg"></label>
-      <input class="form-control" type="text" id="mailreg" name="mailreg" placeholder="Escriba Su Correo Electrónico" style="width: 95.5%;">
-      
-      <label for="empresa"></label>
-      <input class="form-control" type="text" id="empresa" name="empresa" placeholder="Escriba la empresa en la que labora" style="width: 95.5%; margin-top:5px;">
-      
-    
-    <div style="padding-top: 30px;"></div>
-    <div>
-          
-          <button class="btn btn-primary btn-sm" onclick="contact_submit();">Ir al Evento</button>
-        </div>
-
-
-
-</form>
-  </div>
-</div>
    
        `;       
       // User is signed out.
