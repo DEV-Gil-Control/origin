@@ -90,7 +90,6 @@ function observer(){
       <input class="form-control" type="text" id="empresa" name="empresa" placeholder="Escriba la empresa en la que labora" style="width: 95.5%; margin-top:5px;">
       
      
-        </div>  
     </form>
     <div style="padding-top: 30px;"></div>
     <div>
