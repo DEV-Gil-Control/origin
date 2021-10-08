@@ -90,7 +90,7 @@ function observer(){
   </div>
   <div class="form-group">
     <label for="empresa">Empresa para que labora</label>
-    <input type="empresa" class="form-control" id="empresa" placeholder="Empresa">
+    <input type="empresa" class="form-control" id="empresa" placeholder="Nombre de la empresa">
   </div>
   <div class="form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
