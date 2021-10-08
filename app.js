@@ -96,7 +96,7 @@ function observer(){
     <div style="padding-top: 30px;"></div>
     <div>
           
-          <button class="btn btn-primary btn-sm" onclick="contact_submit();">Entrar</button>
+          <button class="btn btn-primary btn-sm" onclick="contact_submit(); setTimeout(); location.href='https://global.gotomeeting.com/join/589781757'">Entrar</button>
         </div>
 
 
@@ -149,3 +149,9 @@ function show(user) {
 location.href = 'https://global.gotomeeting.com/join/589781757'
   }
 }
+
+var delayInMilliseconds = 5000; //5 second
+
+setTimeout(function() {
+  //your code to be executed after 5 second
+}, delayInMilliseconds);
