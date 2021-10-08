@@ -89,7 +89,7 @@ function observer(){
       <input class="form-control" type="text" id="mailreg" name="mailreg" placeholder="Escriba Su Correo Electrónico" style="width: 95.5%;">
       
       <label for="empresa"></label>
-      <input class="form-control" type="text" id="empresa" name="empresa" placeholder="Escriba la empresa en la que labora" style="width: 95.5%; margin-left: 5px; margin-top:5px;">
+      <input class="form-control" type="text" id="empresa" name="empresa" placeholder="Escriba la empresa en la que labora" style="width: 95.5%; margin-top:5px;">
       
      
         </div>  
