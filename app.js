@@ -96,7 +96,8 @@ function observer(){
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Acepto el Aviso de Privacidad</label>
   </div>
-  <button type="submit" class="btn btn-primary">Entrar</button>
+  <div style="padding-top: 10px;"> </div>
+  <button type="submit" class="btn btn-success" style="text-align: center;">Entrar</button>
 </form>
   </div>
 </div>
