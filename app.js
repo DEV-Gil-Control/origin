@@ -107,18 +107,7 @@ function observer(){
 }
 observer();
 
-function singOut(){
-  firebase.auth().signOut().then(function() {
-    // Sign-out successful.
-    console.log(' Saliendo... ')
-  }).catch(function(error) {
-    // An error happened.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-      // ...
-    console.log(' Codigo de error (${errorCode}), Mensaje de error (${errorMessage})')
-  });
-}
+
 
 function verification(){
   var user = firebase.auth().currentUser;
