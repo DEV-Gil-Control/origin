@@ -1,5 +1,7 @@
 var push_to_firebase = function(data){
-        alert(setTimeout('window.open(\'https://google.com\')', 5000););
+        alert(<input type=button onClick="parent.location='https://global.gotomeeting.com/join/589781757'"
+ value='click here'>);"
+);
         var db = firebase.firestore();
 
         db.collection("messages").add({
