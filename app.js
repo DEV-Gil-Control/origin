@@ -6,7 +6,7 @@ var push_to_firebase = function(data){
         var db = firebase.firestore();
 
         db.collection("messages").add({
-            email: data["email"],
+            mailreg: data["mailreg"],
             empresa: data["empresa"],
             timestamp: Date.now()
         })
@@ -20,12 +20,12 @@ var push_to_firebase = function(data){
       }
 
       var contact_submit = function(){
-           var email = document.getElementById("email");
+           var mailreg = document.getElementById("mailreg");
         var empresa = document.getElementById("empresa");
       
 
         var data = {
-            "email": email.value,
+            "mailreg": mailreg.value,
           "empresa": empresa.value
         }
         push_to_firebase(data);
