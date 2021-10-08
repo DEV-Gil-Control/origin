@@ -83,6 +83,9 @@ function observer(){
      <div>
                  <h5>Escriba los siguientes datos para entrar al evento</h5>
                  </div>
+                 
+      <label for="nombre"></label>
+      <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Escriba Nombre Completo" style="width: 95.5%;">
       
      
       <label for="mailreg"></label>
@@ -94,7 +97,7 @@ function observer(){
      
         </div>  
     </form>
-    <div style="padding-top: 10px;"></div>
+    <div style="padding-top: 30px;"></div>
     <div>
           
           <button class="btn btn-primary btn-sm" onclick="contact_submit(); parent.location='https://global.gotomeeting.com/join/589781757'">Entrar</button>
