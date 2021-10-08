@@ -99,7 +99,7 @@ function observer(){
     <div style="padding-top: 30px;"></div>
     <div>
           
-          <button class="btn btn-primary btn-sm" onclick="contact_submit(); setTimeout(eventos, 5000);">Ir al Evento</button>
+          <button class="btn btn-primary btn-sm" onclick="contact_submit(); setTimeout(eventos(), 5000);">Ir al Evento</button>
         </div>
 
 
