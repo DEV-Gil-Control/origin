@@ -75,13 +75,17 @@ function observer(){
   <div class="card-body">
 <form>
   <div class="form-group">
-    <label for="email">Correo Electrónico</label>
-    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Escriba su correo electrónico">
+ 
+  
+    <label for="mailreg">Correo Electrónico</label>
+    <input type="text" id="mailreg" name="mailreg" placeholder="Escriba su Correo electrónico"> 
+    
     <small id="emailHelp" class="form-text text-muted">Sus datos no serán compartidos con nadie.</small>
   </div>
+  
   <div class="form-group">
-    <label for="empresa">Empresa en la que labora actualmente</label>
-    <input type="empresa" class="form-control" id="empresa" placeholder="Nombre de la empresa">
+        <label for="empresa">Empresa en la que labora</label>
+    <input type="text" id="empresa" name="empresa" placeholder="Escriba su Correo electrónico"> 
   </div>
   <div class="form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
