@@ -65,11 +65,4 @@ var push_to_firebase = function(data){
 
 
 
-function eventos() {
- location.href = 'https://global.gotomeeting.com/join/589781757';
-}
-
-
-
-
 
